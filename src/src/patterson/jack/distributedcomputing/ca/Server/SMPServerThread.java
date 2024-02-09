@@ -1,7 +1,8 @@
 package patterson.jack.distributedcomputing.ca.Server;
 
+import patterson.jack.distributedcomputing.ca.SMPMessage;
 import patterson.jack.distributedcomputing.ca.SMPSocket;
-import patterson.jack.distributedcomputing.ca.Services.CommandService;
+import patterson.jack.distributedcomputing.ca.Server.ServerServices.Commands.CommandService;
 
 public class SMPServerThread implements Runnable {
 
@@ -21,11 +22,13 @@ public class SMPServerThread implements Runnable {
         try {
             boolean shouldLogOff = false;
             while (!shouldLogOff) {
+                SMPMessage receivedMessage = socket.receiveMessage();
+                commandService.parseCommand(receivedMessage.getMessage(), CommandService.LoginCommand);
+                server.addMessage(receivedMessage.getMessage());
+
+                System.out.println(receivedMessage);
                 break;
             }
-
-            String httpResponse = "Status: " + 200 + "\n" + "Message: " + "Hello I am Jack";
-            System.out.println(httpResponse);
         } catch (Exception exception) {
             exception.printStackTrace();
         }

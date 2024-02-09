@@ -29,11 +29,20 @@ public class SMPSocket {
         output = new DataOutputStream(outStream);
     }
 
-    public void sendMessage(String message){
+    public void sendMessage(int statusCode, String message) throws IOException {
+        String messageToSend = "Status: " + statusCode + ", Message: " + message;
 
+        output.writeBytes(messageToSend);
+        output.flush();
     }
 
-    public String receiveMessage() {
-        return "";
+    public void sendMessage(SMPMessage smpMessage) throws IOException {
+        output.writeBytes(smpMessage.toString());
+        output.flush();
+    }
+
+    public SMPMessage receiveMessage() throws IOException {
+
+        return SMPMessage.parseMessageString(input.readLine());
     }
 }

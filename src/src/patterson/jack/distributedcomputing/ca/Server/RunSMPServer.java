@@ -1,7 +1,7 @@
 package patterson.jack.distributedcomputing.ca.Server;
 
-import patterson.jack.distributedcomputing.ca.Services.CommandService;
-import patterson.jack.distributedcomputing.ca.Services.SecurityService;
+import patterson.jack.distributedcomputing.ca.Server.ServerServices.Commands.CommandService;
+import patterson.jack.distributedcomputing.ca.Server.ServerServices.SecurityService;
 
 public class RunSMPServer {
 
@@ -14,8 +14,7 @@ public class RunSMPServer {
         int serverPort;
         if (args.length >= 1) {
             serverPort = Integer.parseInt(args[0]);
-        }
-        else {
+        } else {
             serverPort = defaultServerPort;
         }
 

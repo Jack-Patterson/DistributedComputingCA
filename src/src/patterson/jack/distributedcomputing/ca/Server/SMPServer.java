@@ -1,7 +1,7 @@
 package patterson.jack.distributedcomputing.ca.Server;
 
 import patterson.jack.distributedcomputing.ca.SMPSocket;
-import patterson.jack.distributedcomputing.ca.Services.CommandService;
+import patterson.jack.distributedcomputing.ca.Server.ServerServices.Commands.CommandService;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -42,7 +42,8 @@ public class SMPServer {
                 SMPSocket smpSocket = waitForAndReceiveConnection(serverSocket);
                 System.out.println("Connection Accepted.");
 
-                createNewThread(smpSocket);
+                Thread thread = createNewThread(smpSocket);
+                thread.start();
                 System.out.println("Connection now ready to send and receive messages.");
             }
         } catch (IOException ioException) {
@@ -57,9 +58,9 @@ public class SMPServer {
         return new SMPSocket(connection);
     }
 
-    private void createNewThread(SMPSocket socket) {
+    private Thread createNewThread(SMPSocket socket) {
         SMPServerThread smpServerThread = new SMPServerThread(this, socket, commandService);
-        Thread thread = new Thread(smpServerThread);
-        thread.start();
+
+        return new Thread(smpServerThread);
     }
 }
