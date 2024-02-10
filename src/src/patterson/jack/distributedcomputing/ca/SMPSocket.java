@@ -8,7 +8,7 @@ public class SMPSocket {
 
     private final Socket socket;
     private BufferedReader input;
-    private DataOutputStream output;
+    private PrintWriter output;
 
     public SMPSocket(InetAddress acceptorHost, int acceptorPort) throws IOException {
         this.socket = new Socket(acceptorHost, acceptorPort);
@@ -26,18 +26,19 @@ public class SMPSocket {
         input = new BufferedReader(inStreamReader);
 
         OutputStream outStream = socket.getOutputStream();
-        output = new DataOutputStream(outStream);
+        OutputStreamWriter outStreamReader = new OutputStreamWriter(outStream);
+        output = new PrintWriter(outStreamReader);
     }
 
     public void sendMessage(int statusCode, String message) throws IOException {
         String messageToSend = "Status: " + statusCode + ", Message: " + message;
 
-        output.writeBytes(messageToSend);
+        output.print(message + "\n");
         output.flush();
     }
 
     public void sendMessage(SMPMessage smpMessage) throws IOException {
-        output.writeBytes(smpMessage.toString());
+        output.print(smpMessage.toString() + "\n");
         output.flush();
     }
 
