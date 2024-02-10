@@ -7,7 +7,6 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class SMPServer {
     private final ArrayList<String> messages;
@@ -22,10 +21,6 @@ public class SMPServer {
 
     public ArrayList<String> getMessages() {
         return messages;
-    }
-
-    public void addMessage(String message) {
-        messages.add(message);
     }
 
     public int getServerPort() {
@@ -46,8 +41,6 @@ public class SMPServer {
                 thread.start();
                 System.out.println("Connection now ready to send and receive messages.");
             }
-        } catch (IOException ioException) {
-            System.err.println("Error opening socket. " + Arrays.toString(ioException.getStackTrace()));
         } catch (Exception exception) {
             exception.printStackTrace();
         }

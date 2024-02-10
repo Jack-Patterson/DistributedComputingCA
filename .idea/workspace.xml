@@ -4,23 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da1101dd-b20e-44c3-a820-9663183b5911" name="Changes" comment="Added serialization">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="da1101dd-b20e-44c3-a820-9663183b5911" name="Changes" comment="Server completed for now">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/Server/ServerServices/Commands/GetMessageCommand.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/Server/ServerServices/Commands/LogoutCommand.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/Server/ServerServices/Commands/UploadMessageCommand.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/SMPMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/SMPMessage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/SMPSocket.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/SMPSocket.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/Server/RunSMPServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/Server/RunSMPServer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/Server/SMPServerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/Server/SMPServerThread.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/Server/ServerServices/Commands/Command.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/Server/ServerServices/Commands/Command.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/Server/ServerServices/Commands/CommandService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/Server/ServerServices/Commands/CommandService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/Server/ServerServices/Commands/LoginCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/Server/ServerServices/Commands/LoginCommand.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/Server/ServerServices/SecurityService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/Server/ServerServices/SecurityService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/patterson/jack/distributedcomputing/ca/SMPMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/patterson/jack/distributedcomputing/ca/SMPMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/patterson/jack/distributedcomputing/ca/SMPSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/patterson/jack/distributedcomputing/ca/SMPSocket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/patterson/jack/distributedcomputing/ca/Server/SMPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/patterson/jack/distributedcomputing/ca/Server/SMPServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/patterson/jack/distributedcomputing/ca/Server/SMPServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/patterson/jack/distributedcomputing/ca/Server/SMPServerThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/patterson/jack/distributedcomputing/ca/Server/ServerServices/Commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/patterson/jack/distributedcomputing/ca/Server/ServerServices/Commands/Command.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/patterson/jack/distributedcomputing/ca/Server/ServerServices/Commands/CommandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/patterson/jack/distributedcomputing/ca/Server/ServerServices/Commands/CommandService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/patterson/jack/distributedcomputing/ca/Server/ServerServices/Commands/GetMessageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/patterson/jack/distributedcomputing/ca/Server/ServerServices/Commands/GetMessageCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/patterson/jack/distributedcomputing/ca/Server/ServerServices/Commands/LoginCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/patterson/jack/distributedcomputing/ca/Server/ServerServices/Commands/LoginCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/patterson/jack/distributedcomputing/ca/Server/ServerServices/SecurityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/patterson/jack/distributedcomputing/ca/Server/ServerServices/SecurityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/patterson/jack/distributedcomputing/ca/Server/ServerServices/Commands/LogoutCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/patterson/jack/distributedcomputing/ca/Server/ServerServices/Commands/LogoutCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/patterson/jack/distributedcomputing/ca/Server/ServerServices/Commands/UploadMessageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/patterson/jack/distributedcomputing/ca/Server/ServerServices/Commands/UploadMessageCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +64,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.sourceCode",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -105,7 +111,7 @@
       <option name="presentableId" value="Default" />
       <updated>1707568517784</updated>
       <workItem from="1707568519661" duration="1157000" />
-      <workItem from="1707569710591" duration="2937000" />
+      <workItem from="1707569710591" duration="9033000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed code issues">
       <created>1707568571856</created>
@@ -121,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1707570056472</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added login functionality">
+      <created>1707572920549</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1707572920549</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +143,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fixed code issues" />
     <MESSAGE value="Added serialization" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added serialization" />
+    <MESSAGE value="Added login functionality" />
+    <MESSAGE value="Server completed for now" />
+    <option name="LAST_COMMIT_MESSAGE" value="Server completed for now" />
   </component>
 </project>

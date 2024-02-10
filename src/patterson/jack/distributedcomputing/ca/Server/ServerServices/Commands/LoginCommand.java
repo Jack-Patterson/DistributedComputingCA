@@ -1,6 +1,7 @@
 package patterson.jack.distributedcomputing.ca.Server.ServerServices.Commands;
 
 import patterson.jack.distributedcomputing.ca.SMPMessage;
+import patterson.jack.distributedcomputing.ca.Server.SMPServer;
 import patterson.jack.distributedcomputing.ca.Server.SMPServerThread;
 import patterson.jack.distributedcomputing.ca.Server.ServerServices.SecurityService;
 
@@ -10,8 +11,20 @@ public class LoginCommand extends Command {
         super(prefix, argumentsCount);
     }
 
-    public SMPMessage execute(SMPMessage receivedMessage, SMPServerThread thread) {
+    public SMPMessage execute(SMPMessage receivedMessage, SMPServerThread thread, SMPServer server) {
+        if (!getPrefix().equals(receivedMessage.command())) {
+            return SMPMessage.InvalidCommandMessage;
+        }
+        else if (thread.isLoggedIn()) {
+            return new SMPMessage(SMPMessage.StatusBadRequest, SMPMessage.CommandServerResponse, "Client is already logged in.");
+        }
+
         String[] splitMessage = receivedMessage.message().trim().split(" ");
+
+        if (splitMessage.length < 2) {
+            return new SMPMessage(SMPMessage.StatusForbidden, SMPMessage.CommandServerResponse,
+                    "Not enough log in credentials provided. Please ensure that both a username and password were provided.");
+        }
 
         SecurityService securityService = new SecurityService();
         boolean logInSuccessful = securityService.validateLogin(splitMessage[0], splitMessage[1]);
@@ -20,7 +33,7 @@ public class LoginCommand extends Command {
         if (logInSuccessful) {
             response = new SMPMessage(SMPMessage.StatusOk, SMPMessage.CommandServerResponse, "Log in successful.");
         } else {
-            response = SMPMessage.StatusForbiddenMessage;
+            return SMPMessage.StatusForbiddenMessage;
         }
 
         thread.setIsLoggedIn(logInSuccessful);

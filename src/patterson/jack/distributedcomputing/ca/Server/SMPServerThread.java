@@ -6,8 +6,6 @@ import patterson.jack.distributedcomputing.ca.Server.ServerServices.Commands.Com
 import patterson.jack.distributedcomputing.ca.Server.ServerServices.Commands.CommandService;
 import patterson.jack.distributedcomputing.ca.Server.ServerServices.Commands.LoginCommand;
 
-import java.io.IOException;
-
 public class SMPServerThread implements Runnable {
 
     private final SMPServer server;
@@ -47,7 +45,7 @@ public class SMPServerThread implements Runnable {
         return loggedOff;
     }
 
-    public void setLoggedOff(boolean loggedOff) {
+    public void setIsLoggedOff(boolean loggedOff) {
         this.loggedOff = loggedOff;
     }
 
@@ -55,28 +53,37 @@ public class SMPServerThread implements Runnable {
     public void run() {
         try {
             while (!isLoggedOff()) {
-                sendAndReceiveMessage();
+                SMPMessage receivedMessage = getSocket().receiveMessage();
+                System.out.println("Received Message: " + receivedMessage);
+
+                SMPMessage response;
+                try {
+                    Command command = getCommandService().parseCommand(receivedMessage);
+
+                    response = getResponse(command, receivedMessage);
+                } catch (ClassNotFoundException cnfe) {
+                    response = SMPMessage.InvalidCommandMessage;
+                } catch (IllegalArgumentException iae){
+                    response = new SMPMessage(SMPMessage.StatusBadRequest, SMPMessage.CommandServerResponse, iae.getMessage());
+                }
+
+                getSocket().sendMessage(response);
+                System.out.println("Responded With: " + response);
             }
         } catch (Exception exception) {
             exception.printStackTrace();
         }
     }
 
-    private void sendAndReceiveMessage() throws IOException, ClassNotFoundException {
-        SMPMessage receivedMessage = getSocket().receiveMessage();
-        System.out.println("Received Message: " + receivedMessage);
-
-        Command command = getCommandService().parseCommand(receivedMessage);
+    private SMPMessage getResponse(Command command, SMPMessage receivedMessage) {
         SMPMessage response;
 
-        if (isLoggedIn || command instanceof LoginCommand) {
-            response = command.execute(receivedMessage, this);
+        if (isLoggedIn() || command instanceof LoginCommand) {
+            response = command.execute(receivedMessage, this, getServer());
         } else {
             response = SMPMessage.StatusForbiddenMessage;
         }
 
-        getSocket().sendMessage(response);
-
-        System.out.println("Responded With: " + response);
+        return response;
     }
 }

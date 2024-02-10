@@ -27,10 +27,18 @@ public class CommandService {
         Optional<Command> usedCommandOptional = commands.stream()
                 .filter(command -> message.command().equalsIgnoreCase(command.getPrefix()))
                 .findFirst();
-        if (usedCommandOptional.isPresent())
+        if (usedCommandOptional.isPresent()) {
             usedCommand = usedCommandOptional.get();
+        }
         else {
             throw new ClassNotFoundException("Command could not be found in the string " + message);
+        }
+
+        int argumentsLength = message.message().trim().length() == 0 ? 0 : message.message().trim().split(" ").length;
+        if (argumentsLength < usedCommand.getArgumentsCount()){
+            throw new IllegalArgumentException("Command requires " + usedCommand.getArgumentsCount() +
+                    " argument(s) provided. Please provide " + (usedCommand.getArgumentsCount() - argumentsLength) +
+                    " more argument(s).");
         }
 
         return usedCommand;

@@ -1,6 +1,7 @@
 package patterson.jack.distributedcomputing.ca.Server.ServerServices.Commands;
 
 import patterson.jack.distributedcomputing.ca.SMPMessage;
+import patterson.jack.distributedcomputing.ca.Server.SMPServer;
 import patterson.jack.distributedcomputing.ca.Server.SMPServerThread;
 
 public abstract class Command {
@@ -25,7 +26,5 @@ public abstract class Command {
         return argumentsCount;
     }
 
-    public SMPMessage execute(SMPMessage sentMessage, SMPServerThread smpServerThread){
-        return sentMessage;
-    }
+    public abstract SMPMessage execute(SMPMessage sentMessage, SMPServerThread thread, SMPServer server);
 }
