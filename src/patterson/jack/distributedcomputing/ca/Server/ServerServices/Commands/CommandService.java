@@ -1,5 +1,6 @@
 package patterson.jack.distributedcomputing.ca.Server.ServerServices.Commands;
 
+import patterson.jack.distributedcomputing.ca.SMPMessage;
 import patterson.jack.distributedcomputing.ca.Server.ServerServices.SecurityService;
 
 import java.util.ArrayList;
@@ -8,25 +9,23 @@ import java.util.Optional;
 public class CommandService {
     private final ArrayList<Command> commands;
 
-    public CommandService(SecurityService securityService) {
+    public CommandService() {
         this.commands = new ArrayList<>();
         initializeCommands();
     }
 
     private void initializeCommands(){
-        commands.add(new LoginCommand("login", 2));
-        commands.add(new LoginCommand("logout", 0));
-        commands.add(new LoginCommand("uploadmessage", 1));
-        commands.add(new LoginCommand("getmessages", 1));
+        commands.add(new LoginCommand(Command.loginPrefix, 2));
+        commands.add(new LogoutCommand(Command.logoutPrefix, 0));
+        commands.add(new UploadMessageCommand(Command.uploadMessagePrefix, 1));
+        commands.add(new GetMessageCommand(Command.getMessagesPrefix, 1));
     }
 
-    public Command parseCommand(String message) throws ClassNotFoundException {
-        String[] commandAsArray = message.trim().split(" ");
-        String potentialPrefix = commandAsArray[0];
+    public Command parseCommand(SMPMessage message) throws ClassNotFoundException {
         Command usedCommand;
 
         Optional<Command> usedCommandOptional = commands.stream()
-                .filter(command -> potentialPrefix.equalsIgnoreCase(command.getPrefix()))
+                .filter(command -> message.command().equalsIgnoreCase(command.getPrefix()))
                 .findFirst();
         if (usedCommandOptional.isPresent())
             usedCommand = usedCommandOptional.get();

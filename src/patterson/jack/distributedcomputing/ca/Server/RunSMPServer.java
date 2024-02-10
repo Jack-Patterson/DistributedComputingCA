@@ -8,8 +8,7 @@ public class RunSMPServer {
     private static final int defaultServerPort = 7;
 
     public static void main(String[] args) {
-        SecurityService securityService = new SecurityService();
-        CommandService commandService = new CommandService(securityService);
+        CommandService commandService = new CommandService();
 
         int serverPort;
         if (args.length >= 1) {

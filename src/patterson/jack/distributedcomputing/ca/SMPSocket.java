@@ -35,8 +35,8 @@ public class SMPSocket {
         output = new PrintWriter(outStreamReader);
     }
 
-    public void sendMessage(int statusCode, String message) throws IOException {
-        String messageToSend = serializer.toJson(new SMPMessage(statusCode, message));
+    public void sendMessage(int statusCode, String command, String message) throws IOException {
+        String messageToSend = serializer.toJson(new SMPMessage(statusCode, command, message));
 
         output.print(messageToSend + "\n");
         output.flush();
