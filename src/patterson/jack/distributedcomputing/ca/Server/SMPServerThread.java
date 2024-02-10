@@ -24,11 +24,11 @@ public class SMPServerThread implements Runnable {
             boolean shouldLogOff = false;
             while (!shouldLogOff) {
                 SMPMessage receivedMessage = socket.receiveMessage();
-                Command command = commandService.parseCommand(receivedMessage.getMessage());
+                Command command = commandService.parseCommand(receivedMessage.message());
 
                 command.execute(server, this);
 
-                server.addMessage(receivedMessage.getMessage());
+                server.addMessage(receivedMessage.message());
 
                 socket.sendMessage(receivedMessage);
 

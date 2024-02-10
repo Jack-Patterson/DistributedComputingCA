@@ -1,5 +1,7 @@
 package patterson.jack.distributedcomputing.ca;
 
+import com.google.gson.Gson;
+
 import java.io.*;
 import java.net.InetAddress;
 import java.net.Socket;
@@ -9,13 +11,16 @@ public class SMPSocket {
     private final Socket socket;
     private BufferedReader input;
     private PrintWriter output;
+    private final Gson serializer;
 
     public SMPSocket(InetAddress acceptorHost, int acceptorPort) throws IOException {
+        this.serializer = new Gson();
         this.socket = new Socket(acceptorHost, acceptorPort);
         setStreams();
     }
 
     public SMPSocket(Socket socket) throws IOException {
+        this.serializer = new Gson();
         this.socket = socket;
         setStreams();
     }
@@ -31,19 +36,21 @@ public class SMPSocket {
     }
 
     public void sendMessage(int statusCode, String message) throws IOException {
-        String messageToSend = "Status: " + statusCode + ", Message: " + message;
+        String messageToSend = serializer.toJson(new SMPMessage(statusCode, message));
 
-        output.print(message + "\n");
+        output.print(messageToSend + "\n");
         output.flush();
     }
 
     public void sendMessage(SMPMessage smpMessage) throws IOException {
-        output.print(smpMessage.toString() + "\n");
+        String messageToSend = serializer.toJson(smpMessage);
+
+        output.print(messageToSend + "\n");
         output.flush();
     }
 
     public SMPMessage receiveMessage() throws IOException {
 
-        return SMPMessage.parseMessageString(input.readLine());
+        return serializer.fromJson(input.readLine(), SMPMessage.class);
     }
 }
