@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da1101dd-b20e-44c3-a820-9663183b5911" name="Changes" comment="Server completed for now">
+    <list default="true" id="da1101dd-b20e-44c3-a820-9663183b5911" name="Changes" comment="Small changes to server to avoid an exception">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/Server/SMPServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/Server/SMPServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/patterson/jack/distributedcomputing/ca/SMPSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/patterson/jack/distributedcomputing/ca/SMPSocket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/patterson/jack/distributedcomputing/ca/Server/SMPServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/patterson/jack/distributedcomputing/ca/Server/SMPServerThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/Client/RunSMPClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/SMPSocket.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/SMPSocket.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/Server/SMPServerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/Server/SMPServerThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/patterson/jack/distributedcomputing/ca/Client/RunSMPClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/patterson/jack/distributedcomputing/ca/Client/RunSMPClientCli.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,13 +52,26 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.RunSMPServer">
+  <component name="RunManager" selected="Application.RunSMPClientCli">
     <configuration name="EchoClient2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="patterson.jack.distributedcomputing.ca.PeterExamples.EchoClient2" />
       <module name="DistributedComputingCA" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="patterson.jack.distributedcomputing.ca.PeterExamples.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RunSMPClientCli" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="patterson.jack.distributedcomputing.ca.Client.RunSMPClientCli" />
+      <module name="DistributedComputingCA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="patterson.jack.distributedcomputing.ca.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -80,6 +94,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RunSMPClientCli" />
         <item itemvalue="Application.EchoClient2" />
         <item itemvalue="Application.RunSMPServer" />
       </list>
@@ -95,7 +110,7 @@
       <updated>1707568517784</updated>
       <workItem from="1707568519661" duration="1157000" />
       <workItem from="1707569710591" duration="9091000" />
-      <workItem from="1707660308596" duration="502000" />
+      <workItem from="1707660308596" duration="1125000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed code issues">
       <created>1707568571856</created>
@@ -125,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1707581054851</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Small changes to server to avoid an exception">
+      <created>1707660843712</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1707660843712</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +158,7 @@
     <MESSAGE value="Added serialization" />
     <MESSAGE value="Added login functionality" />
     <MESSAGE value="Server completed for now" />
-    <option name="LAST_COMMIT_MESSAGE" value="Server completed for now" />
+    <MESSAGE value="Small changes to server to avoid an exception" />
+    <option name="LAST_COMMIT_MESSAGE" value="Small changes to server to avoid an exception" />
   </component>
 </project>
