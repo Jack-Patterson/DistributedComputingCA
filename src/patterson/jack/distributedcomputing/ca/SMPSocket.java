@@ -50,7 +50,6 @@ public class SMPSocket {
     }
 
     public SMPMessage receiveMessage() throws IOException {
-
         return serializer.fromJson(input.readLine(), SMPMessage.class);
     }
 }

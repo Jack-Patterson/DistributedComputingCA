@@ -6,6 +6,8 @@ import patterson.jack.distributedcomputing.ca.Server.ServerServices.Commands.Com
 import patterson.jack.distributedcomputing.ca.Server.ServerServices.Commands.CommandService;
 import patterson.jack.distributedcomputing.ca.Server.ServerServices.Commands.LoginCommand;
 
+import java.net.SocketException;
+
 public class SMPServerThread implements Runnable {
 
     private final SMPServer server;
@@ -63,13 +65,15 @@ public class SMPServerThread implements Runnable {
                     response = getResponse(command, receivedMessage);
                 } catch (ClassNotFoundException cnfe) {
                     response = SMPMessage.InvalidCommandMessage;
-                } catch (IllegalArgumentException iae){
+                } catch (IllegalArgumentException iae) {
                     response = new SMPMessage(SMPMessage.StatusBadRequest, SMPMessage.CommandServerResponse, iae.getMessage());
                 }
 
                 getSocket().sendMessage(response);
                 System.out.println("Responded With: " + response);
             }
+        } catch (SocketException se) {
+            System.out.println("Connection to socket has been reset. Thread is ending.");
         } catch (Exception exception) {
             exception.printStackTrace();
         }
