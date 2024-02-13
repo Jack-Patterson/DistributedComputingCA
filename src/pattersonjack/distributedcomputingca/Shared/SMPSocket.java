@@ -1,4 +1,4 @@
-package pattersonjack.distributedcomputingca;
+package pattersonjack.distributedcomputingca.Shared;
 
 import com.google.gson.Gson;
 
@@ -51,5 +51,9 @@ public class SMPSocket {
 
     public SMPMessage receiveMessage() throws IOException {
         return serializer.fromJson(input.readLine(), SMPMessage.class);
+    }
+
+    public void closeConnection() throws IOException {
+        socket.close();
     }
 }

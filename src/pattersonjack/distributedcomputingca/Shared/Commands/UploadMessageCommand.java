@@ -1,6 +1,6 @@
-package pattersonjack.distributedcomputingca.Server.ServerServices.Commands;
+package pattersonjack.distributedcomputingca.Shared.Commands;
 
-import pattersonjack.distributedcomputingca.SMPMessage;
+import pattersonjack.distributedcomputingca.Shared.SMPMessage;
 import pattersonjack.distributedcomputingca.Server.SMPServer;
 import pattersonjack.distributedcomputingca.Server.SMPServerThread;
 

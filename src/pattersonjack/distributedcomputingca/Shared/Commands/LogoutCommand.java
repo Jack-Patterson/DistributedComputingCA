@@ -1,6 +1,6 @@
-package pattersonjack.distributedcomputingca.Server.ServerServices.Commands;
+package pattersonjack.distributedcomputingca.Shared.Commands;
 
-import pattersonjack.distributedcomputingca.SMPMessage;
+import pattersonjack.distributedcomputingca.Shared.SMPMessage;
 import pattersonjack.distributedcomputingca.Server.SMPServer;
 import pattersonjack.distributedcomputingca.Server.SMPServerThread;
 
@@ -13,6 +13,6 @@ public class LogoutCommand extends Command {
     public SMPMessage execute(SMPMessage sentMessage, SMPServerThread thread, SMPServer server) {
         thread.setIsLoggedOff(true);
 
-        return new SMPMessage(SMPMessage.StatusOk, SMPMessage.CommandServerResponse, "Logging off.");
+        return new SMPMessage(SMPMessage.StatusOk, SMPMessage.CommandServerResponseLogout, "Logging off.");
     }
 }

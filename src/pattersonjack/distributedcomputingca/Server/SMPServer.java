@@ -1,7 +1,7 @@
 package pattersonjack.distributedcomputingca.Server;
 
-import pattersonjack.distributedcomputingca.SMPSocket;
-import pattersonjack.distributedcomputingca.Server.ServerServices.Commands.CommandService;
+import pattersonjack.distributedcomputingca.Shared.SMPSocket;
+import pattersonjack.distributedcomputingca.Shared.Commands.CommandService;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -27,7 +27,7 @@ public class SMPServer {
         return serverPort;
     }
 
-    public void runServer() {
+    public void run() {
         try (ServerSocket serverSocket = new ServerSocket(serverPort)) {
             System.out.println("SMP Server Ready");
 

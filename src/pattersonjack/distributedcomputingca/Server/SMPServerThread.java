@@ -1,10 +1,10 @@
 package pattersonjack.distributedcomputingca.Server;
 
-import pattersonjack.distributedcomputingca.SMPMessage;
-import pattersonjack.distributedcomputingca.SMPSocket;
-import pattersonjack.distributedcomputingca.Server.ServerServices.Commands.Command;
-import pattersonjack.distributedcomputingca.Server.ServerServices.Commands.CommandService;
-import pattersonjack.distributedcomputingca.Server.ServerServices.Commands.LoginCommand;
+import pattersonjack.distributedcomputingca.Shared.SMPMessage;
+import pattersonjack.distributedcomputingca.Shared.SMPSocket;
+import pattersonjack.distributedcomputingca.Shared.Commands.Command;
+import pattersonjack.distributedcomputingca.Shared.Commands.CommandService;
+import pattersonjack.distributedcomputingca.Shared.Commands.LoginCommand;
 
 import java.net.SocketException;
 
@@ -54,6 +54,9 @@ public class SMPServerThread implements Runnable {
     @Override
     public void run() {
         try {
+            SMPMessage connectionAccepted = new SMPMessage(SMPMessage.StatusOk, SMPMessage.CommandServerResponse, "Connection has been accepted.");
+            getSocket().sendMessage(connectionAccepted);
+
             while (!isLoggedOff()) {
                 SMPMessage receivedMessage = getSocket().receiveMessage();
                 System.out.println("Received Message: " + receivedMessage);
@@ -72,6 +75,8 @@ public class SMPServerThread implements Runnable {
                 getSocket().sendMessage(response);
                 System.out.println("Responded With: " + response);
             }
+
+            socket.closeConnection();
         } catch (SocketException se) {
             System.out.println("Connection to socket has been reset. Thread is ending.");
         } catch (Exception exception) {

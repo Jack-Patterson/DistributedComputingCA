@@ -1,7 +1,7 @@
 package pattersonjack.distributedcomputingca.Server;
 
-import pattersonjack.distributedcomputingca.HostData;
-import pattersonjack.distributedcomputingca.Server.ServerServices.Commands.CommandService;
+import pattersonjack.distributedcomputingca.Shared.HostData;
+import pattersonjack.distributedcomputingca.Shared.Commands.CommandService;
 
 public class RunSMPServer {
 
@@ -16,6 +16,6 @@ public class RunSMPServer {
         }
 
         SMPServer smpServer = new SMPServer(commandService, serverPort);
-        smpServer.runServer();
+        smpServer.run();
     }
 }
