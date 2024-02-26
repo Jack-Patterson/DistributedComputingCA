@@ -1,8 +1,7 @@
 package pattersonjack.distributedcomputingca.Shared.Commands;
 
-import pattersonjack.distributedcomputingca.Shared.SMPMessage;
-import pattersonjack.distributedcomputingca.Server.SMPServer;
 import pattersonjack.distributedcomputingca.Server.SMPServerThread;
+import pattersonjack.distributedcomputingca.Shared.SMPMessage;
 
 public abstract class Command {
     private final String prefix;
@@ -13,7 +12,7 @@ public abstract class Command {
     public static String uploadMessagePrefix = "uploadmessage";
     public static String getMessagesPrefix = "getmessages";
 
-    public Command (String prefix, int argumentsCount){
+    public Command(String prefix, int argumentsCount) {
         this.prefix = prefix;
         this.argumentsCount = argumentsCount;
     }
@@ -26,5 +25,5 @@ public abstract class Command {
         return argumentsCount;
     }
 
-    public abstract SMPMessage execute(SMPMessage sentMessage, SMPServerThread thread, SMPServer server);
+    public abstract SMPMessage execute(SMPMessage sentMessage, SMPServerThread thread);
 }

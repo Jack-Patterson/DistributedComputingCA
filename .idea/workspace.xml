@@ -6,9 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="da1101dd-b20e-44c3-a820-9663183b5911" name="Changes" comment="Working gui">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Client/RunSMPClientCli.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Client/RunSMPClientCli.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Client/SMPClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Client/SMPClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/Commands/CommandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/Commands/CommandService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Server/SMPServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Server/SMPServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Server/SMPServerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Server/SMPServerThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Shared/Commands/Command.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Shared/Commands/Command.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Shared/Commands/GetMessageCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Shared/Commands/GetMessageCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Shared/Commands/LoginCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Shared/Commands/LoginCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Shared/Commands/LogoutCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Shared/Commands/LogoutCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Shared/Commands/UploadMessageCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Shared/Commands/UploadMessageCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Server/SMPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Server/SMPServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Server/SMPServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Server/SMPServerThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/Commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/Commands/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/Commands/GetMessageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/Commands/GetMessageCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/Commands/LoginCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/Commands/LoginCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/Commands/LogoutCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/Commands/LogoutCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/Commands/UploadMessageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/Commands/UploadMessageCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +62,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.RunSMPClientGui">
+  <component name="RunManager" selected="Application.pattersonjack.distributedcomputingca.Client.RunSMPClientCli">
     <configuration name="RunSMPClientCli" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="patterson.jack.distributedcomputing.ca.Client.RunSMPClientCli" />
       <module name="DistributedComputingCA" />
@@ -142,6 +153,7 @@
       <workItem from="1707838162756" duration="4388000" />
       <workItem from="1708507288870" duration="10000" />
       <workItem from="1708605491275" duration="150000" />
+      <workItem from="1708938464483" duration="549000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed code issues">
       <created>1707568571856</created>
@@ -199,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1707835428793</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Working gui">
+      <created>1708938485240</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1708938485240</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

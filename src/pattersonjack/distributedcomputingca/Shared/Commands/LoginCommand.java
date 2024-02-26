@@ -1,9 +1,8 @@
 package pattersonjack.distributedcomputingca.Shared.Commands;
 
-import pattersonjack.distributedcomputingca.Shared.SMPMessage;
-import pattersonjack.distributedcomputingca.Server.SMPServer;
 import pattersonjack.distributedcomputingca.Server.SMPServerThread;
 import pattersonjack.distributedcomputingca.Server.ServerServices.SecurityService;
+import pattersonjack.distributedcomputingca.Shared.SMPMessage;
 
 public class LoginCommand extends Command {
 
@@ -11,11 +10,10 @@ public class LoginCommand extends Command {
         super(prefix, argumentsCount);
     }
 
-    public SMPMessage execute(SMPMessage receivedMessage, SMPServerThread thread, SMPServer server) {
+    public SMPMessage execute(SMPMessage receivedMessage, SMPServerThread thread) {
         if (!getPrefix().equals(receivedMessage.command())) {
             return SMPMessage.InvalidCommandMessage;
-        }
-        else if (thread.isLoggedIn()) {
+        } else if (thread.isLoggedIn()) {
             return new SMPMessage(SMPMessage.StatusBadRequest, SMPMessage.CommandServerResponse, "Client is already logged in.");
         }
 

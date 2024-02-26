@@ -1,8 +1,7 @@
 package pattersonjack.distributedcomputingca.Shared.Commands;
 
-import pattersonjack.distributedcomputingca.Shared.SMPMessage;
-import pattersonjack.distributedcomputingca.Server.SMPServer;
 import pattersonjack.distributedcomputingca.Server.SMPServerThread;
+import pattersonjack.distributedcomputingca.Shared.SMPMessage;
 
 public class GetMessageCommand extends Command {
     public GetMessageCommand(String prefix, int argumentsCount) {
@@ -10,18 +9,24 @@ public class GetMessageCommand extends Command {
     }
 
     @Override
-    public SMPMessage execute(SMPMessage sentMessage, SMPServerThread thread, SMPServer server) {
+    public SMPMessage execute(SMPMessage sentMessage, SMPServerThread thread) {
         String message;
 
         String argument = sentMessage.message().trim().split(" ")[0];
 
         if (argument.equals("-1")) {
-            message = "Messages: " + server.getMessages();
+            message = "Messages: " + thread.getMessages();
         } else {
             try {
                 int index = Integer.parseInt(argument);
 
-                message = "Message at index " + index + ": " + server.getMessages().get(index);
+                if (index < 0)
+                    index = Math.abs(index);
+
+                if (index == 0)
+                    message = "Message at index " + (index + 1) + ": " + thread.getMessages().get(index);
+                else
+                    message = "Message at index " + index + ": " + thread.getMessages().get(index - 1);
             } catch (NumberFormatException nfe) {
                 return new SMPMessage(SMPMessage.StatusBadRequest, SMPMessage.CommandServerResponse, "Argument was not an integer.");
             } catch (IndexOutOfBoundsException ioobe) {

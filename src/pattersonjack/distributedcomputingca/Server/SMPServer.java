@@ -1,26 +1,19 @@
 package pattersonjack.distributedcomputingca.Server;
 
-import pattersonjack.distributedcomputingca.Shared.SMPSocket;
 import pattersonjack.distributedcomputingca.Shared.Commands.CommandService;
+import pattersonjack.distributedcomputingca.Shared.SMPSocket;
 
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.ArrayList;
 
 public class SMPServer {
-    private final ArrayList<String> messages;
     private final CommandService commandService;
     private final int serverPort;
 
     public SMPServer(CommandService commandService, int serverPort) {
-        this.messages = new ArrayList<>();
         this.commandService = commandService;
         this.serverPort = serverPort;
-    }
-
-    public ArrayList<String> getMessages() {
-        return messages;
     }
 
     public int getServerPort() {

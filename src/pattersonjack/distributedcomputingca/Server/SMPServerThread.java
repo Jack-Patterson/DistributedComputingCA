@@ -7,20 +7,27 @@ import pattersonjack.distributedcomputingca.Shared.Commands.CommandService;
 import pattersonjack.distributedcomputingca.Shared.Commands.LoginCommand;
 
 import java.net.SocketException;
+import java.util.ArrayList;
 
 public class SMPServerThread implements Runnable {
 
     private final SMPServer server;
     private final SMPSocket socket;
     private final CommandService commandService;
+    private final ArrayList<String> messages;
     private boolean isLoggedIn = false;
     boolean loggedOff = false;
 
 
     public SMPServerThread(SMPServer server, SMPSocket socket, CommandService commandService) {
+        this.messages = new ArrayList<>();
         this.server = server;
         this.socket = socket;
         this.commandService = commandService;
+    }
+
+    public ArrayList<String> getMessages() {
+        return messages;
     }
 
     public SMPServer getServer() {
@@ -88,7 +95,7 @@ public class SMPServerThread implements Runnable {
         SMPMessage response;
 
         if (isLoggedIn() || command instanceof LoginCommand) {
-            response = command.execute(receivedMessage, this, getServer());
+            response = command.execute(receivedMessage, this);
         } else {
             response = SMPMessage.StatusForbiddenMessage;
         }

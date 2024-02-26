@@ -1,8 +1,7 @@
 package pattersonjack.distributedcomputingca.Shared.Commands;
 
-import pattersonjack.distributedcomputingca.Shared.SMPMessage;
-import pattersonjack.distributedcomputingca.Server.SMPServer;
 import pattersonjack.distributedcomputingca.Server.SMPServerThread;
+import pattersonjack.distributedcomputingca.Shared.SMPMessage;
 
 public class UploadMessageCommand extends Command {
     public UploadMessageCommand(String prefix, int argumentsCount) {
@@ -10,9 +9,9 @@ public class UploadMessageCommand extends Command {
     }
 
     @Override
-    public SMPMessage execute(SMPMessage sentMessage, SMPServerThread thread, SMPServer server) {
+    public SMPMessage execute(SMPMessage sentMessage, SMPServerThread thread) {
 
-        server.getMessages().add(sentMessage.message());
+        thread.getMessages().add(sentMessage.message());
 
         return new SMPMessage(SMPMessage.StatusOk, SMPMessage.CommandServerResponse, "Message saved successfully.");
     }
