@@ -4,68 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da1101dd-b20e-44c3-a820-9663183b5911" name="Changes" comment="Added classes">
+    <list default="true" id="da1101dd-b20e-44c3-a820-9663183b5911" name="Changes" comment="Working gui">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/Client/HostData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/Client/RunSMPClientCli.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/Client/SMPClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/PeterExamples/ConnectedDatagramSocket.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/PeterExamples/CounterClient1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/PeterExamples/CounterClientHelper1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/PeterExamples/CounterServer1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/PeterExamples/DatagramMessage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/PeterExamples/DaytimeClient1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/PeterExamples/DaytimeClient2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/PeterExamples/DaytimeClientHelper1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/PeterExamples/DaytimeClientHelper2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/PeterExamples/DaytimeServer1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/PeterExamples/DaytimeServer2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/PeterExamples/EchoClient1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/PeterExamples/EchoClient2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/PeterExamples/EchoClientHelper1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/PeterExamples/EchoClientHelper2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/PeterExamples/EchoServer1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/PeterExamples/EchoServer2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/PeterExamples/EchoServer3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/PeterExamples/EchoServerThread.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/PeterExamples/Example1Receiver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/PeterExamples/Example1Sender.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/PeterExamples/Example2ReceiverSender.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/PeterExamples/Example2SenderReceiver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/PeterExamples/Example3Receiver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/PeterExamples/Example3Sender.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/PeterExamples/Example4ConnectionAcceptor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/PeterExamples/Example4ConnectionRequestor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/PeterExamples/MyClientDatagramSocket.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/PeterExamples/MyDatagramSocket.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/PeterExamples/MyServerDatagramSocket.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/PeterExamples/MyStreamSocket.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/SMPMessage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/SMPSocket.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/Server/RunSMPServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/Server/SMPServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/Server/SMPServerThread.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/Server/ServerServices/Commands/Command.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/Server/ServerServices/Commands/CommandService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/Server/ServerServices/Commands/GetMessageCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/Server/ServerServices/Commands/LoginCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/Server/ServerServices/Commands/LogoutCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/Server/ServerServices/Commands/UploadMessageCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/patterson/jack/distributedcomputing/ca/Server/ServerServices/SecurityService.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Client/RunSMPClientCli.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Client/RunSMPClientCli.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Client/SMPClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Client/SMPClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/HostData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/HostData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/SMPMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/SMPMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/SMPSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/SMPSocket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Server/RunSMPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Server/RunSMPServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Server/SMPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Server/SMPServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Server/SMPServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Server/SMPServerThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Server/ServerServices/Commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/Commands/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Server/ServerServices/Commands/CommandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/Commands/CommandService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Server/ServerServices/Commands/GetMessageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/Commands/GetMessageCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Server/ServerServices/Commands/LoginCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/Commands/LoginCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Server/ServerServices/Commands/LogoutCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/Commands/LogoutCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Server/ServerServices/Commands/UploadMessageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/Commands/UploadMessageCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/Commands/CommandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/Commands/CommandService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,8 +120,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.RunSMPClientGui" />
-        <item itemvalue="Application.pattersonjack.distributedcomputingca.Client.RunSMPClientCli" />
         <item itemvalue="Application.pattersonjack.distributedcomputingca.Server.RunSMPServer" />
+        <item itemvalue="Application.pattersonjack.distributedcomputingca.Client.RunSMPClientCli" />
         <item itemvalue="Application.RunSMPServer" />
         <item itemvalue="Application.RunSMPClientCli" />
       </list>
@@ -195,7 +138,10 @@
       <workItem from="1707568519661" duration="1157000" />
       <workItem from="1707569710591" duration="9091000" />
       <workItem from="1707660308596" duration="4599000" />
-      <workItem from="1707830074711" duration="5164000" />
+      <workItem from="1707830074711" duration="6090000" />
+      <workItem from="1707838162756" duration="4388000" />
+      <workItem from="1708507288870" duration="10000" />
+      <workItem from="1708605491275" duration="150000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed code issues">
       <created>1707568571856</created>
@@ -246,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1707661669005</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Working gui">
+      <created>1707835428793</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1707835428793</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,6 +213,7 @@
     <MESSAGE value="Small changes to server to avoid an exception" />
     <MESSAGE value="Moved folder" />
     <MESSAGE value="Added classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added classes" />
+    <MESSAGE value="Working gui" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working gui" />
   </component>
 </project>

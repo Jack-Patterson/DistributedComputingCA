@@ -64,12 +64,16 @@ public class CommandService {
         }
 
         int argumentsLength = textWithoutCommand.trim().length() == 0 ? 0 : textWithoutCommand.trim().split(" ").length;
-        if (argumentsLength < usedCommand.getArgumentsCount() && !(usedCommand instanceof GetMessageCommand)){
-            throw new IllegalArgumentException("Command requires " + usedCommand.getArgumentsCount() +
-                    " argument(s). Please provide " + (usedCommand.getArgumentsCount() - argumentsLength) +
-                    " more argument(s).");
+        if (argumentsLength < usedCommand.getArgumentsCount()){
+            if (usedCommand instanceof GetMessageCommand){
+                textWithoutCommand = "-1";
+            }
+            else {
+                throw new IllegalArgumentException("Command requires " + usedCommand.getArgumentsCount() +
+                        " argument(s). Please provide " + (usedCommand.getArgumentsCount() - argumentsLength) +
+                        " more argument(s).");
+            }
         }
-
         return new SMPMessage(200, usedCommand.getPrefix(), textWithoutCommand);
     }
 }

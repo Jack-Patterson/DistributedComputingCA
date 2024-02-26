@@ -45,14 +45,13 @@ public class RunSMPClientCli {
                     shouldEndConnection = true;
                 }
 
-                System.out.println(response);
+                System.out.println(response.message() + "\n");
             } catch (IllegalArgumentException | ClassNotFoundException ex) {
                 System.out.println(ex.getMessage());
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
         }
-
     }
 
     private static HostData getHostData(BufferedReader reader) throws IOException {

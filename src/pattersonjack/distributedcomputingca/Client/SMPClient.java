@@ -25,8 +25,6 @@ public class SMPClient {
 
         SMPMessage message = commandService.parseText(messageAsText);
 
-        System.out.println(message);
-
         socket.sendMessage(message);
     }
 
