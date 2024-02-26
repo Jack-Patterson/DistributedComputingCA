@@ -4,22 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da1101dd-b20e-44c3-a820-9663183b5911" name="Changes" comment="Working gui">
+    <list default="true" id="da1101dd-b20e-44c3-a820-9663183b5911" name="Changes" comment="Done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Client/SMPClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Client/SMPClient.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Server/SMPServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Server/SMPServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Server/SMPServerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Server/SMPServerThread.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Shared/Commands/Command.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Shared/Commands/Command.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Shared/Commands/GetMessageCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Shared/Commands/GetMessageCommand.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Shared/Commands/LoginCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Shared/Commands/LoginCommand.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Shared/Commands/LogoutCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Shared/Commands/LogoutCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Shared/Commands/UploadMessageCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Shared/Commands/UploadMessageCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Server/SMPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Server/SMPServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Server/SMPServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Server/SMPServerThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/Commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/Commands/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/Commands/GetMessageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/Commands/GetMessageCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/Commands/LoginCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/Commands/LoginCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/Commands/LogoutCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/Commands/LogoutCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/Commands/UploadMessageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/Commands/UploadMessageCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Shared/SMPSocket.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Shared/SMPSocket.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Client/RunSMPClientCli.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Client/RunSMPClientCli.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Client/SMPClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Client/SMPClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/SMPSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/SMPSocket.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,9 +126,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.RunSMPClientGui" />
-        <item itemvalue="Application.pattersonjack.distributedcomputingca.Server.RunSMPServer" />
         <item itemvalue="Application.pattersonjack.distributedcomputingca.Client.RunSMPClientCli" />
+        <item itemvalue="Application.pattersonjack.distributedcomputingca.Server.RunSMPServer" />
+        <item itemvalue="Application.RunSMPClientGui" />
         <item itemvalue="Application.RunSMPServer" />
         <item itemvalue="Application.RunSMPClientCli" />
       </list>
@@ -153,7 +149,7 @@
       <workItem from="1707838162756" duration="4388000" />
       <workItem from="1708507288870" duration="10000" />
       <workItem from="1708605491275" duration="150000" />
-      <workItem from="1708938464483" duration="549000" />
+      <workItem from="1708938464483" duration="1745000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed code issues">
       <created>1707568571856</created>
@@ -218,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708938485240</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Done">
+      <created>1708939066535</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1708939066535</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,6 +236,7 @@
     <MESSAGE value="Moved folder" />
     <MESSAGE value="Added classes" />
     <MESSAGE value="Working gui" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working gui" />
+    <MESSAGE value="Done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Done" />
   </component>
 </project>

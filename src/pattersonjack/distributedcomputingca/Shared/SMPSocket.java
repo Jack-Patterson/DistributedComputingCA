@@ -9,13 +9,13 @@ import java.net.Socket;
 public class SMPSocket {
 
     private final Socket socket;
+    private final Gson serializer;
     private BufferedReader input;
     private PrintWriter output;
-    private final Gson serializer;
 
-    public SMPSocket(InetAddress acceptorHost, int acceptorPort) throws IOException {
+    public SMPSocket(HostData hostData) throws IOException {
         this.serializer = new Gson();
-        this.socket = new Socket(acceptorHost, acceptorPort);
+        this.socket = new Socket(InetAddress.getByName(hostData.hostname()), hostData.port());
         setStreams();
     }
 

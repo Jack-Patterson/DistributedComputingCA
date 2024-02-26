@@ -6,7 +6,6 @@ import pattersonjack.distributedcomputingca.Shared.SMPMessage;
 import pattersonjack.distributedcomputingca.Shared.SMPSocket;
 
 import java.io.IOException;
-import java.net.InetAddress;
 
 public class SMPClient {
 
@@ -14,8 +13,7 @@ public class SMPClient {
     private final CommandService commandService;
 
     public SMPClient(HostData hostData) throws IOException {
-        InetAddress host = InetAddress.getByName(hostData.hostname());
-        socket = new SMPSocket(host, hostData.port());
+        socket = new SMPSocket(hostData);
         commandService = new CommandService();
 
         System.out.println(socket.receiveMessage().message());
@@ -31,11 +29,11 @@ public class SMPClient {
     public SMPMessage receiveMessage() throws IOException {
         SMPMessage message = socket.receiveMessage();
 
-        if (message.command().equals(SMPMessage.CommandServerResponseLogout)){
+        if (message.command().equals(SMPMessage.CommandServerResponseLogout)) {
             try {
                 socket.closeConnection();
+            } catch (Exception ignored) {
             }
-            catch (Exception ignored){}
         }
 
         return message;
