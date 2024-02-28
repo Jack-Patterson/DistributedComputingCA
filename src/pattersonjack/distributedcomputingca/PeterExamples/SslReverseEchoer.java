@@ -9,12 +9,13 @@
 import java.io.*;
 import java.net.*;
 import java.security.*;
+import java.security.cert.CertificateException;
 import javax.net.ssl.*;
 public class SslReverseEchoer {
-   public static void main(String[] args) {
-      String ksName = "herong.jks";
-      char ksPass[] = "password".toCharArray();
-      char ctPass[] = "password".toCharArray();
+   public static void main(String[] args) throws UnrecoverableKeyException, CertificateException, KeyStoreException, IOException, NoSuchAlgorithmException, KeyManagementException {
+      String ksName = "ssl/dcca.jks";
+      char ksPass[] = "123456789".toCharArray();
+      char ctPass[] = "123456789".toCharArray();
       try {
          KeyStore ks = KeyStore.getInstance("JKS");
          ks.load(new FileInputStream(ksName), ksPass);
@@ -57,7 +58,8 @@ public class SslReverseEchoer {
          c.close();
          s.close();
       } catch (Exception e) {
-         System.err.println(e.toString());
+//         System.err.println(e.toString());
+         throw e;
       }
    }
    private static void printSocketInfo(SSLSocket s) {

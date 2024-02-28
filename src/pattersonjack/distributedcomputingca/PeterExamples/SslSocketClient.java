@@ -9,7 +9,7 @@ import java.io.*;
 import java.net.*;
 import javax.net.ssl.*;
 public class SslSocketClient {
-   public static void main(String[] args) {
+   public static void main(String[] args) throws IOException {
       BufferedReader in = new BufferedReader(
          new InputStreamReader(System.in));
       PrintStream out = System.out;
@@ -36,7 +36,8 @@ public class SslSocketClient {
          r.close();
          c.close();
       } catch (IOException e) {
-         System.err.println(e.toString());
+//         System.err.println(e.toString());
+         throw e;
       }
    }
    private static void printSocketInfo(SSLSocket s) {

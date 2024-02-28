@@ -2,24 +2,28 @@ package pattersonjack.distributedcomputingca.Shared;
 
 import com.google.gson.Gson;
 
+import javax.net.ssl.SSLSocket;
+import javax.net.ssl.SSLSocketFactory;
 import java.io.*;
 import java.net.InetAddress;
 import java.net.Socket;
 
 public class SMPSocket {
 
-    private final Socket socket;
+    private final SSLSocket socket;
     private final Gson serializer;
     private BufferedReader input;
     private PrintWriter output;
 
     public SMPSocket(HostData hostData) throws IOException {
         this.serializer = new Gson();
-        this.socket = new Socket(InetAddress.getByName(hostData.hostname()), hostData.port());
+
+        SSLSocketFactory factory = (SSLSocketFactory) SSLSocketFactory.getDefault();
+        this.socket = (SSLSocket) factory.createSocket(hostData.hostname(), hostData.port());
         setStreams();
     }
 
-    public SMPSocket(Socket socket) throws IOException {
+    public SMPSocket(SSLSocket socket) throws IOException {
         this.serializer = new Gson();
         this.socket = socket;
         setStreams();
