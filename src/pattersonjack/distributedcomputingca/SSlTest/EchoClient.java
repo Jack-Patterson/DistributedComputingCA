@@ -17,8 +17,8 @@ public class EchoClient {
         int port = 1234;
 
         // Set system properties for truststore
-        System.setProperty("javax.net.ssl.trustStore", "ssl/public.jks");
-        System.setProperty("javax.net.ssl.trustStorePassword", "123456789");
+//        System.setProperty("javax.net.ssl.trustStore", "ssl/public.jks");
+//        System.setProperty("javax.net.ssl.trustStorePassword", "123456789");
 
         try {
             SSLContext sslContext = SSLContext.getInstance("TLS");

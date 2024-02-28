@@ -4,20 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da1101dd-b20e-44c3-a820-9663183b5911" name="Changes" comment="Working solution">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="da1101dd-b20e-44c3-a820-9663183b5911" name="Changes" comment="Cert was wrong have working solution">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Client/SMPClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Client/SMPClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/SSlTest/EchoClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/SSlTest/EchoClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/SSlTest/EchoServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/SSlTest/EchoServer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Server/RunSMPServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Server/RunSMPServer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Server/SMPServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Server/SMPServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Shared/SMPSocket.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Shared/SMPSocket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/PeterExamples/SslReverseEchoer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/PeterExamples/SslReverseEchoer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/PeterExamples/SslSocketClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/PeterExamples/SslSocketClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Client/SMPClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Client/SMPClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/SSlTest/EchoClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/SSlTest/EchoClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/SSlTest/EchoServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/SSlTest/EchoServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Server/RunSMPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Server/RunSMPServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Server/SMPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Server/SMPServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/SMPSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/SMPSocket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ssl/dcca.jks" beforeDir="false" afterPath="$PROJECT_DIR$/ssl/dcca.jks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ssl/info.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,10 +58,16 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.EchoClient">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jackp\Desktop\Development\DistributedComputingCA\src\pattersonjack\distributedcomputingca" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.RunSMPClientGui">
     <configuration name="EchoClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pattersonjack.distributedcomputingca.SSlTest.EchoClient" />
       <module name="DistributedComputingCA" />
+      <option name="PROGRAM_PARAMETERS" value="-Djavax.net.ssl.trustStore=ssl/public.jks -Djavax.net.ssl.trustStorePassword=123456789" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="pattersonjack.distributedcomputingca.SSlTest.*" />
@@ -77,6 +81,7 @@
     <configuration name="EchoServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pattersonjack.distributedcomputingca.SSlTest.EchoServer" />
       <module name="DistributedComputingCA" />
+      <option name="PROGRAM_PARAMETERS" value="-Djavax.net.ssl.keyStore=ssl/dcca.jks -Djavax.net.ssl.keyStorePassword=123456789" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="pattersonjack.distributedcomputingca.SSlTest.*" />
@@ -87,13 +92,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SSLClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pattersonjack.distributedcomputingca.SSlTest.SSLClient" />
+    <configuration name="RunSMPClientCli" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pattersonjack.distributedcomputingca.Client.RunSMPClientCli" />
       <module name="DistributedComputingCA" />
       <option name="PROGRAM_PARAMETERS" value="-Djavax.net.ssl.trustStore=ssl/public.jks -Djavax.net.ssl.trustStorePassword=123456789" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="pattersonjack.distributedcomputingca.SSlTest.*" />
+          <option name="PATTERN" value="pattersonjack.distributedcomputingca.Client.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -101,36 +106,48 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SslReverseEchoer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="SslReverseEchoer" />
+    <configuration name="RunSMPClientGui" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pattersonjack.distributedcomputingca.Client.RunSMPClientGui" />
       <module name="DistributedComputingCA" />
-      <option name="PROGRAM_PARAMETERS" value="-Djdk.tls.server.protocols=TLSv1.2 -Djavax.net.debug=ssl,handshake" />
+      <option name="PROGRAM_PARAMETERS" value="-Djavax.net.ssl.trustStore=ssl/public.jks -Djavax.net.ssl.trustStorePassword=123456789" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pattersonjack.distributedcomputingca.Client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SslSocketClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="SslSocketClient" />
+    <configuration name="RunSMPServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pattersonjack.distributedcomputingca.Server.RunSMPServer" />
       <module name="DistributedComputingCA" />
-      <option name="PROGRAM_PARAMETERS" value="-Djavax.net.ssl.trustStore=ssl/public.jks -Djavax.net.ssl.trustStorePassword=123456789 -Djdk.tls.client.protocols=TLSv1.2 " />
+      <option name="PROGRAM_PARAMETERS" value="-Djavax.net.ssl.keyStore=ssl/dcca.jks -Djavax.net.ssl.keyStorePassword=123456789" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pattersonjack.distributedcomputingca.Server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.RunSMPClientGui" />
+      <item itemvalue="Application.RunSMPClientCli" />
+      <item itemvalue="Application.RunSMPServer" />
       <item itemvalue="Application.EchoServer" />
-      <item itemvalue="Application.SSLClient" />
       <item itemvalue="Application.EchoClient" />
-      <item itemvalue="Application.SslSocketClient" />
-      <item itemvalue="Application.SslReverseEchoer" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RunSMPClientGui" />
+        <item itemvalue="Application.RunSMPServer" />
+        <item itemvalue="Application.RunSMPClientCli" />
         <item itemvalue="Application.EchoClient" />
         <item itemvalue="Application.EchoServer" />
-        <item itemvalue="Application.SslSocketClient" />
-        <item itemvalue="Application.SslReverseEchoer" />
-        <item itemvalue="Application.SSLClient" />
       </list>
     </recent_temporary>
   </component>
@@ -153,6 +170,7 @@
       <workItem from="1708957487769" duration="1466000" />
       <workItem from="1709114301304" duration="4508000" />
       <workItem from="1709118893996" duration="922000" />
+      <workItem from="1709120420037" duration="3435000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed code issues">
       <created>1707568571856</created>
@@ -238,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708944386973</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Cert was wrong have working solution">
+      <created>1709120683704</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1709120683704</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,16 +280,12 @@
     <MESSAGE value="Working gui" />
     <MESSAGE value="Done" />
     <MESSAGE value="Working solution" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working solution" />
+    <MESSAGE value="Cert was wrong have working solution" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cert was wrong have working solution" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Client/RunSMPClientCli.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/PeterExamples/SslSocketClient.java</url>
           <line>21</line>

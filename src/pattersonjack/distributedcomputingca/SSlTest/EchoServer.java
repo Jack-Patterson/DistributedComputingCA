@@ -10,8 +10,8 @@ public class EchoServer {
         int port = 1234; // Port number to listen on
 
         // Set system properties for keystore
-        System.setProperty("javax.net.ssl.keyStore", "ssl/dcca.jks");
-        System.setProperty("javax.net.ssl.keyStorePassword", "123456789");
+//        System.setProperty("javax.net.ssl.keyStore", "ssl/dcca.jks");
+//        System.setProperty("javax.net.ssl.keyStorePassword", "123456789");
 
         try {
             SSLContext sslContext = SSLContext.getInstance("TLS");

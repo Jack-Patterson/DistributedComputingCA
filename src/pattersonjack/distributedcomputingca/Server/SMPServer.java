@@ -5,10 +5,8 @@ import pattersonjack.distributedcomputingca.Shared.SMPSocket;
 
 import javax.net.ssl.*;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.net.ServerSocket;
-import java.net.Socket;
+import java.io.InputStream;
 import java.security.*;
 import java.security.cert.CertificateException;
 
@@ -25,25 +23,10 @@ public class SMPServer {
         return serverPort;
     }
 
-    public void run() throws KeyStoreException, IOException, NoSuchAlgorithmException, CertificateException, UnrecoverableKeyException, KeyManagementException {
-        String ksName = "ssl/dcca.jks";
-        char ksPass[] = "t00217640".toCharArray();
-        char ctPass[] = "t00217640".toCharArray();
+    public void run() {
+        SSLServerSocketFactory ssf = getSSLServerSocketFactory();
 
-        KeyStore ks = KeyStore.getInstance("JKS");
-        ks.load(new FileInputStream(ksName), ksPass);
-
-        KeyManagerFactory kmf =
-                KeyManagerFactory.getInstance("SunX509");
-        kmf.init(ks, ctPass);
-
-        SSLContext sc = SSLContext.getInstance("TLS");
-        sc.init(kmf.getKeyManagers(), null, null);
-        SSLServerSocketFactory ssf = sc.getServerSocketFactory();
-
-
-        try (SSLServerSocket serverSocket
-                     = (SSLServerSocket) ssf.createServerSocket(8888);) {
+        try (SSLServerSocket serverSocket = (SSLServerSocket) ssf.createServerSocket(serverPort)) {
             System.out.println("SMP Server Ready");
 
             while (true) {
@@ -61,15 +44,50 @@ public class SMPServer {
         }
     }
 
-    private SMPSocket waitForAndReceiveConnection(SSLServerSocket serverSocket) throws IOException, KeyStoreException, CertificateException, NoSuchAlgorithmException, UnrecoverableKeyException, KeyManagementException {
+    private SMPSocket waitForAndReceiveConnection(SSLServerSocket serverSocket) throws IOException {
 
-        SSLSocket c = (SSLSocket) serverSocket.accept();
-        return new SMPSocket(c);
+        SSLSocket connection = (SSLSocket) serverSocket.accept();
+        return new SMPSocket(connection);
     }
 
     private Thread createNewThread(SMPSocket socket) {
         SMPServerThread smpServerThread = new SMPServerThread(this, socket, commandService);
 
         return new Thread(smpServerThread);
+    }
+
+    private SSLServerSocketFactory getSSLServerSocketFactory() {
+        SSLContext sslContext = getSSLContext();
+        initializeSSLContext(sslContext);
+
+        return sslContext.getServerSocketFactory();
+    }
+
+    private SSLContext getSSLContext() {
+        SSLContext sslContext = null;
+        try {
+            sslContext = SSLContext.getInstance("TLS");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return sslContext;
+    }
+
+    private void initializeSSLContext(SSLContext sslContext) {
+        try {
+            KeyStore keyStore = KeyStore.getInstance(KeyStore.getDefaultType());
+            try (InputStream trustStoreIS = new FileInputStream("ssl/dcca.jks")) {
+                keyStore.load(trustStoreIS, "123456789".toCharArray());
+            }
+
+            KeyManagerFactory keyManagerFactory = KeyManagerFactory.getInstance(KeyManagerFactory.getDefaultAlgorithm());
+            keyManagerFactory.init(keyStore, "123456789".toCharArray());
+
+            sslContext.init(keyManagerFactory.getKeyManagers(), null, null);
+        } catch (KeyStoreException | KeyManagementException | NoSuchAlgorithmException | IOException |
+                 CertificateException | UnrecoverableKeyException e) {
+            e.printStackTrace();
+        }
     }
 }

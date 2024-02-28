@@ -1,0 +1,4 @@
+CLIENT
+-Djavax.net.ssl.trustStore=ssl/public.jks -Djavax.net.ssl.trustStorePassword=123456789
+SERVER
+-Djavax.net.ssl.keyStore=ssl/dcca.jks -Djavax.net.ssl.keyStorePassword=123456789ó
