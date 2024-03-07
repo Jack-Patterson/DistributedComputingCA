@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da1101dd-b20e-44c3-a820-9663183b5911" name="Changes" comment="Cert was wrong have working solution">
+    <list default="true" id="da1101dd-b20e-44c3-a820-9663183b5911" name="Changes" comment="Working solution with some added bits. Want to adbstract SSL logic next">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Client/SMPClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Client/SMPClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/SSlTest/EchoClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/SSlTest/EchoClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/SSlTest/EchoServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/SSlTest/EchoServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Server/RunSMPServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Server/RunSMPServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Server/SMPServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Server/SMPServer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Client/SMPClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Client/SMPClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/SSlTest/EchoClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/SSlTest/EchoClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/SSlTest/EchoServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/SSlTest/EchoServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Server/RunSMPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Server/RunSMPServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Server/SMPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Server/SMPServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +54,7 @@
       <recent name="C:\Users\jackp\Desktop\Development\DistributedComputingCA\src\pattersonjack\distributedcomputingca" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RunSMPClientGui">
+  <component name="RunManager" selected="Application.RunSMPClientCli">
     <configuration name="EchoClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pattersonjack.distributedcomputingca.SSlTest.EchoClient" />
       <module name="DistributedComputingCA" />
@@ -143,9 +134,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.RunSMPClientGui" />
-        <item itemvalue="Application.RunSMPServer" />
         <item itemvalue="Application.RunSMPClientCli" />
+        <item itemvalue="Application.RunSMPServer" />
+        <item itemvalue="Application.RunSMPClientGui" />
         <item itemvalue="Application.EchoClient" />
         <item itemvalue="Application.EchoServer" />
       </list>
@@ -170,7 +161,9 @@
       <workItem from="1708957487769" duration="1466000" />
       <workItem from="1709114301304" duration="4508000" />
       <workItem from="1709118893996" duration="922000" />
-      <workItem from="1709120420037" duration="3435000" />
+      <workItem from="1709120420037" duration="3656000" />
+      <workItem from="1709563135420" duration="757000" />
+      <workItem from="1709563990540" duration="187000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed code issues">
       <created>1707568571856</created>
@@ -263,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1709120683704</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Working solution with some added bits. Want to adbstract SSL logic next">
+      <created>1709124290128</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1709124290128</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,7 +281,8 @@
     <MESSAGE value="Done" />
     <MESSAGE value="Working solution" />
     <MESSAGE value="Cert was wrong have working solution" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cert was wrong have working solution" />
+    <MESSAGE value="Working solution with some added bits. Want to adbstract SSL logic next" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working solution with some added bits. Want to adbstract SSL logic next" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

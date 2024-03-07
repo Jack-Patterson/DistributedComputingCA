@@ -1,6 +1,5 @@
 package pattersonjack.distributedcomputingca.Client;
 
-import pattersonjack.distributedcomputingca.Shared.AbstractSMPSSLHandler;
 import pattersonjack.distributedcomputingca.Shared.Commands.CommandService;
 import pattersonjack.distributedcomputingca.Shared.HostData;
 import pattersonjack.distributedcomputingca.Shared.SMPMessage;
