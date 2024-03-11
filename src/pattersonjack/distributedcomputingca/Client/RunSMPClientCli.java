@@ -8,6 +8,13 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class RunSMPClientCli {
+    /**
+     * This is the main method for the client. It will prompt the user for the hostname and port of the server, and then
+     * create a new SMPClient object with the given hostname and port. It will then prompt the user for commands to send
+     * to the server, and will print the server's response to the console.
+     *
+     * @param args The command line arguments.
+     */
     public static void main(String[] args) {
         InputStreamReader inputStreamReader = new InputStreamReader(System.in);
         BufferedReader reader = new BufferedReader(inputStreamReader);
@@ -22,6 +29,13 @@ public class RunSMPClientCli {
         }
     }
 
+    /**
+     * This method will run the command line interface for the client. It will prompt the user for commands to send to
+     * the server, and will print the server's response to the console.
+     *
+     * @param client The SMPClient object to use for sending and receiving messages.
+     * @param reader The BufferedReader object to use for reading user input.
+     */
     private static void runCli(SMPClient client, BufferedReader reader) {
         boolean shouldEndConnection = false;
         while (!shouldEndConnection) {
@@ -54,6 +68,14 @@ public class RunSMPClientCli {
         }
     }
 
+    /**
+     * This method will prompt the user for the hostname and port of the server, and will return a new HostData object
+     * with the given hostname and port.
+     *
+     * @param reader The BufferedReader object to use for reading user input.
+     * @return A new HostData object with the given hostname and port.
+     * @throws IOException If an I/O error occurs with the reader.
+     */
     private static HostData getHostData(BufferedReader reader) throws IOException {
         System.out.println("Please enter the hostname of the server.");
         String hostname = reader.readLine();

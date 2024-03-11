@@ -37,6 +37,9 @@ public class RunSMPClientGui extends JFrame {
         messageInputArea = new JTextArea();
     }
 
+    /**
+     * This method will create the GUI for the client.
+     */
     private void createGUI() {
         setTitle("SMP Client");
         setSize(400, 300);
@@ -58,6 +61,11 @@ public class RunSMPClientGui extends JFrame {
         setVisible(true);
     }
 
+    /**
+     * This method will connect the client to the server using the hostname and port provided by the user.
+     *
+     * @param e The ActionEvent object.
+     */
     private void connectToServer(ActionEvent e) {
         try {
             String hostname = hostnameField.getText();
@@ -76,6 +84,11 @@ public class RunSMPClientGui extends JFrame {
         }
     }
 
+    /**
+     * This method will send a message to the server based on the command and message input by the user.
+     *
+     * @param e The ActionEvent object.
+     */
     private void sendMessage(ActionEvent e) {
         String command = String.valueOf(commandDropdown.getSelectedItem());
         String messageText = messageInputArea.getText();
@@ -96,6 +109,9 @@ public class RunSMPClientGui extends JFrame {
         }
     }
 
+    /**
+     * This method will show a help dialog to the user.
+     */
     private void showHelp() {
         JOptionPane.showMessageDialog(this, """
                 You may now send commands to the server. The commands are as follows:
@@ -107,6 +123,11 @@ public class RunSMPClientGui extends JFrame {
                 \s""");
     }
 
+    /**
+     * This method will construct the parent panel for the GUI. This panel will contain all other panels.
+     *
+     * @return The constructed JPanel object.
+     */
     private JPanel constructParentPanel() {
         JPanel parentPanel = new JPanel();
         parentPanel.setLayout(new BoxLayout(parentPanel, BoxLayout.Y_AXIS));
@@ -115,6 +136,11 @@ public class RunSMPClientGui extends JFrame {
         return parentPanel;
     }
 
+    /**
+     * This method will construct the panel for connecting to the server.
+     *
+     * @return The constructed JPanel object.
+     */
     private JPanel constructConnectPanel() {
         JPanel connectPanel = new JPanel(new GridLayout(3, 2, 10, 10));
         connectPanel.setBorder(new EmptyBorder(0, 0, 10, 0));
@@ -132,6 +158,11 @@ public class RunSMPClientGui extends JFrame {
         return connectPanel;
     }
 
+    /**
+     * This method will construct the panel for sending messages to the server.
+     *
+     * @return The constructed JPanel object.
+     */
     private JPanel constructSMPPanel() {
         JPanel smpPanel = new JPanel();
         smpPanel.setLayout(new BorderLayout(10, 10));
@@ -160,12 +191,22 @@ public class RunSMPClientGui extends JFrame {
         return smpPanel;
     }
 
+    /**
+     * This method will enable or disable the connection interface based on the given boolean.
+     *
+     * @param isEnabled The boolean to determine if the connection interface should be enabled.
+     */
     private void setConnectionInterfaceEnabled(boolean isEnabled) {
         hostnameField.setEnabled(isEnabled);
         portField.setEnabled(isEnabled);
         connectButton.setEnabled(isEnabled);
     }
 
+    /**
+     * This method will enable or disable the messaging interface based on the given boolean.
+     *
+     * @param isEnabled The boolean to determine if the messaging interface should be enabled.
+     */
     private void setMessagingInterfaceEnabled(boolean isEnabled) {
         commandDropdown.setEnabled(isEnabled);
         messageInputArea.setEnabled(isEnabled);

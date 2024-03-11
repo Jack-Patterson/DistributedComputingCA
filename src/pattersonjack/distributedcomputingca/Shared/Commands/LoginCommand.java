@@ -10,6 +10,13 @@ public class LoginCommand extends Command {
         super(prefix, argumentsCount);
     }
 
+    /**
+     * Executes the login command and provides dn appropriate response.
+     *
+     * @param receivedMessage The message received from the client.
+     * @param thread          The server thread that is handling the client.
+     * @return The message to be sent back to the client.
+     */
     public SMPMessage execute(SMPMessage receivedMessage, SMPServerThread thread) {
         if (!getPrefix().equals(receivedMessage.command())) {
             return SMPMessage.InvalidCommandMessage;

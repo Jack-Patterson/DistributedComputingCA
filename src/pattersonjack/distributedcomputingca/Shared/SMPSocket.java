@@ -3,10 +3,7 @@ package pattersonjack.distributedcomputingca.Shared;
 import com.google.gson.Gson;
 
 import javax.net.ssl.SSLSocket;
-import javax.net.ssl.SSLSocketFactory;
 import java.io.*;
-import java.net.InetAddress;
-import java.net.Socket;
 
 public class SMPSocket {
 
@@ -15,20 +12,17 @@ public class SMPSocket {
     private BufferedReader input;
     private PrintWriter output;
 
-    public SMPSocket(HostData hostData) throws IOException {
-        this.serializer = new Gson();
-
-        SSLSocketFactory factory = (SSLSocketFactory) SSLSocketFactory.getDefault();
-        this.socket = (SSLSocket) factory.createSocket(hostData.hostname(), hostData.port());
-        setStreams();
-    }
-
     public SMPSocket(SSLSocket socket) throws IOException {
         this.serializer = new Gson();
         this.socket = socket;
         setStreams();
     }
 
+    /**
+     * This method is used to create the input and output streams for the socket.
+     *
+     * @throws IOException if there is an error creating the streams.
+     */
     private void setStreams() throws IOException {
         InputStream inStream = socket.getInputStream();
         InputStreamReader inStreamReader = new InputStreamReader(inStream);
@@ -39,24 +33,33 @@ public class SMPSocket {
         output = new PrintWriter(outStreamReader);
     }
 
-    public void sendMessage(int statusCode, String command, String message) throws IOException {
-        String messageToSend = serializer.toJson(new SMPMessage(statusCode, command, message));
-
-        output.print(messageToSend + "\n");
-        output.flush();
-    }
-
-    public void sendMessage(SMPMessage smpMessage) throws IOException {
+    /**
+     * This method is used to send a message to the other socket.
+     *
+     * @param smpMessage the message to send.
+     */
+    public void sendMessage(SMPMessage smpMessage) {
         String messageToSend = serializer.toJson(smpMessage);
 
         output.print(messageToSend + "\n");
         output.flush();
     }
 
+    /**
+     * This method is used to receive a message from the other socket.
+     *
+     * @return the message received.
+     * @throws IOException if there is an error reading the message.
+     */
     public SMPMessage receiveMessage() throws IOException {
         return serializer.fromJson(input.readLine(), SMPMessage.class);
     }
 
+    /**
+     * This method is used to close the connection to the other socket.
+     *
+     * @throws IOException if there is an error closing the connection.
+     */
     public void closeConnection() throws IOException {
         socket.close();
     }

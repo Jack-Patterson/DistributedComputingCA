@@ -8,6 +8,13 @@ public class GetMessageCommand extends Command {
         super(prefix, argumentsCount);
     }
 
+    /**
+     * Returns a message from the server's message list.
+     *
+     * @param sentMessage The message sent by the client.
+     * @param thread      The server thread that received the message.
+     * @return A message to be sent back to the client.
+     */
     @Override
     public SMPMessage execute(SMPMessage sentMessage, SMPServerThread thread) {
         String message;

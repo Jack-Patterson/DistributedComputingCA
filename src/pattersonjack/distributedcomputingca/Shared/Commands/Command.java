@@ -25,5 +25,12 @@ public abstract class Command {
         return argumentsCount;
     }
 
+    /**
+     * Executes the command
+     *
+     * @param sentMessage The message sent by the client
+     * @param thread      The server thread
+     * @return The response message
+     */
     public abstract SMPMessage execute(SMPMessage sentMessage, SMPServerThread thread);
 }

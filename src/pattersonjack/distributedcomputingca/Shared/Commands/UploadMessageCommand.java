@@ -8,6 +8,13 @@ public class UploadMessageCommand extends Command {
         super(prefix, argumentsCount);
     }
 
+    /**
+     * Uploads a message to the server
+     *
+     * @param sentMessage The message to upload
+     * @param thread      The thread that sent the message
+     * @return A message indicating the status of the upload
+     */
     @Override
     public SMPMessage execute(SMPMessage sentMessage, SMPServerThread thread) {
 

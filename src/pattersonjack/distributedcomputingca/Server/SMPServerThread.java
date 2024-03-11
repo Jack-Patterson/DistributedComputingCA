@@ -1,10 +1,10 @@
 package pattersonjack.distributedcomputingca.Server;
 
-import pattersonjack.distributedcomputingca.Shared.SMPMessage;
-import pattersonjack.distributedcomputingca.Shared.SMPSocket;
 import pattersonjack.distributedcomputingca.Shared.Commands.Command;
 import pattersonjack.distributedcomputingca.Shared.Commands.CommandService;
 import pattersonjack.distributedcomputingca.Shared.Commands.LoginCommand;
+import pattersonjack.distributedcomputingca.Shared.SMPMessage;
+import pattersonjack.distributedcomputingca.Shared.SMPSocket;
 
 import java.net.SocketException;
 import java.util.ArrayList;
@@ -58,6 +58,10 @@ public class SMPServerThread implements Runnable {
         this.loggedOff = loggedOff;
     }
 
+    /**
+     * This method is called when the thread is started.
+     * It listens for messages from the client and responds to them.
+     */
     @Override
     public void run() {
         try {
@@ -91,6 +95,10 @@ public class SMPServerThread implements Runnable {
         }
     }
 
+    /**
+     * This method is called when the thread is started.
+     * It listens for messages from the client and responds to them.
+     */
     private SMPMessage getResponse(Command command, SMPMessage receivedMessage) {
         SMPMessage response;
 

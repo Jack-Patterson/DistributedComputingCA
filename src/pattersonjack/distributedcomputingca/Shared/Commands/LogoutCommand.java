@@ -8,6 +8,13 @@ public class LogoutCommand extends Command {
         super(prefix, argumentsCount);
     }
 
+    /**
+     * Logs the user off the server.
+     *
+     * @param sentMessage The message sent by the client.
+     * @param thread      The server thread that sent the message.
+     * @return A message to be sent back to the client.
+     */
     @Override
     public SMPMessage execute(SMPMessage sentMessage, SMPServerThread thread) {
         thread.setIsLoggedOff(true);

@@ -30,13 +30,25 @@ public class SMPClient {
         System.out.println(socket.receiveMessage().message());
     }
 
-    public void sendMessage(String messageAsText) throws IOException, ClassNotFoundException {
+    /**
+     * Sends a message to the server.
+     *
+     * @param messageAsText The message to send to the server.
+     * @throws ClassNotFoundException If the command in the message cannot be parsed.
+     */
+    public void sendMessage(String messageAsText) throws ClassNotFoundException {
 
         SMPMessage message = commandService.parseText(messageAsText);
 
         socket.sendMessage(message);
     }
 
+    /**
+     * Receives a message from the server.
+     *
+     * @return The message received from the server.
+     * @throws IOException If an I/O error occurs when receiving the message.
+     */
     public SMPMessage receiveMessage() throws IOException {
         SMPMessage message = socket.receiveMessage();
 
@@ -50,6 +62,12 @@ public class SMPClient {
         return message;
     }
 
+    /**
+     * Gets an SSL Socket.
+     *
+     * @param hostData The hostname and port number.
+     * @return The SSL Socket.
+     */
     private SSLSocket getSSLSocket(HostData hostData) {
         SSLContext sslContext = getSSLContext();
         initializeSSLContext(sslContext);
@@ -65,6 +83,11 @@ public class SMPClient {
         return sslSocket;
     }
 
+    /**
+     * Retrieves the SSL Context.
+     *
+     * @return The SSL Context.
+     */
     private SSLContext getSSLContext() {
         SSLContext sslContext = null;
         try {
@@ -76,6 +99,11 @@ public class SMPClient {
         return sslContext;
     }
 
+    /**
+     * Initializes the SSL Context with the trust store.
+     *
+     * @param sslContext The SSL Context to initialize.
+     */
     private void initializeSSLContext(SSLContext sslContext) {
         try {
             KeyStore trustStore = KeyStore.getInstance(KeyStore.getDefaultType());

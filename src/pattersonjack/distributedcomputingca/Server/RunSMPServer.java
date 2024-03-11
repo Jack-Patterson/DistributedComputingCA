@@ -1,18 +1,16 @@
 package pattersonjack.distributedcomputingca.Server;
 
-import pattersonjack.distributedcomputingca.Shared.HostData;
 import pattersonjack.distributedcomputingca.Shared.Commands.CommandService;
-
-import java.io.IOException;
-import java.security.KeyManagementException;
-import java.security.KeyStoreException;
-import java.security.NoSuchAlgorithmException;
-import java.security.UnrecoverableKeyException;
-import java.security.cert.CertificateException;
+import pattersonjack.distributedcomputingca.Shared.HostData;
 
 public class RunSMPServer {
 
-    public static void main(String[] args) throws UnrecoverableKeyException, CertificateException, KeyStoreException, IOException, NoSuchAlgorithmException, KeyManagementException {
+    /**
+     * Main method to run the server
+     *
+     * @param args command line arguments
+     */
+    public static void main(String[] args) {
         CommandService commandService = new CommandService();
 
         int serverPort = HostData.defaultHostData.port();
