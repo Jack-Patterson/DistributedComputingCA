@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="102.5" y="631.5">pattersonjack.distributedcomputingca.Server.SMPServerThread</node>
+    <node x="-81.0" y="197.5">pattersonjack.distributedcomputingca.Shared.Commands.LoginCommand</node>
+    <node x="-263.5" y="364.5">pattersonjack.distributedcomputingca.Shared.SMPSocket</node>
+    <node x="-6.0" y="375.5">pattersonjack.distributedcomputingca.Shared.Commands.CommandService</node>
+    <node x="-442.0" y="1215.5">pattersonjack.distributedcomputingca.Client.RunSMPClientCli</node>
+    <node x="-390.5" y="786.5">pattersonjack.distributedcomputingca.Shared.HostData</node>
+    <node x="-801.0" y="197.5">pattersonjack.distributedcomputingca.Shared.Commands.GetMessageCommand</node>
+    <node x="-714.5" y="753.0">pattersonjack.distributedcomputingca.Client.SMPClient</node>
+    <node x="-736.5" y="-35.5">pattersonjack.distributedcomputingca.Shared.SMPMessage</node>
+    <node x="-806.5" y="1497.5">pattersonjack.distributedcomputingca.Server.RunSMPServer</node>
+    <node x="279.0" y="197.5">pattersonjack.distributedcomputingca.Shared.Commands.UploadMessageCommand</node>
+    <node x="-441.0" y="197.5">pattersonjack.distributedcomputingca.Shared.Commands.LogoutCommand</node>
+    <node x="205.5" y="1159.5">pattersonjack.distributedcomputingca.Server.SMPServer</node>
+    <node x="-712.0" y="1138.0">pattersonjack.distributedcomputingca.Client.RunSMPClientGui</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="pattersonjack.distributedcomputingca.Shared.Commands.CommandService" target="pattersonjack.distributedcomputingca.Shared.Commands.UploadMessageCommand" relationship="CREATE">
+      <point x="136.0" y="-15.0" />
+      <point x="450.0" y="421.0" />
+      <point x="0.0" y="38.5" />
+    </edge>
+    <edge source="pattersonjack.distributedcomputingca.Shared.Commands.CommandService" target="pattersonjack.distributedcomputingca.Shared.Commands.LoginCommand" relationship="CREATE">
+      <point x="-40.0" y="-60.5" />
+      <point x="0.0" y="38.5" />
+    </edge>
+    <edge source="pattersonjack.distributedcomputingca.Shared.Commands.LoginCommand" target="pattersonjack.distributedcomputingca.Shared.SMPMessage" relationship="CREATE">
+      <point x="0.0" y="-38.5" />
+      <point x="90.0" y="153.0" />
+      <point x="-630.0" y="153.0" />
+      <point x="0.0" y="71.5" />
+    </edge>
+    <edge source="pattersonjack.distributedcomputingca.Shared.Commands.UploadMessageCommand" target="pattersonjack.distributedcomputingca.Shared.SMPMessage" relationship="CREATE">
+      <point x="0.0" y="-38.5" />
+      <point x="450.0" y="153.0" />
+      <point x="-630.0" y="153.0" />
+      <point x="0.0" y="71.5" />
+    </edge>
+    <edge source="pattersonjack.distributedcomputingca.Shared.Commands.CommandService" target="pattersonjack.distributedcomputingca.Shared.Commands.GetMessageCommand" relationship="CREATE">
+      <point x="-55.0" y="-60.5" />
+      <point x="75.0" y="307.0" />
+      <point x="-630.0" y="307.0" />
+      <point x="0.0" y="38.5" />
+    </edge>
+    <edge source="pattersonjack.distributedcomputingca.Client.RunSMPClientCli" target="pattersonjack.distributedcomputingca.Client.SMPClient" relationship="CREATE">
+      <point x="0.0" y="-60.5" />
+      <point x="-310.0" y="1167.0" />
+      <point x="-428.0" y="1167.0" />
+      <point x="-428.0" y="836.0" />
+      <point x="124.5" y="0.0" />
+    </edge>
+    <edge source="pattersonjack.distributedcomputingca.Client.SMPClient" target="pattersonjack.distributedcomputingca.Shared.Commands.CommandService" relationship="TO_ONE">
+      <point x="0.0" y="83.0" />
+      <point x="-590.0" y="1090.0" />
+      <point x="495.0" y="1090.0" />
+      <point x="495.0" y="436.0" />
+      <point x="136.0" y="0.0" />
+    </edge>
+    <edge source="pattersonjack.distributedcomputingca.Server.RunSMPServer" target="pattersonjack.distributedcomputingca.Shared.Commands.CommandService" relationship="CREATE">
+      <point x="-2.0" y="-38.5" />
+      <point x="-732.0" y="717.0" />
+      <point x="79.5" y="717.0" />
+      <point x="-50.5" y="60.5" />
+    </edge>
+    <edge source="pattersonjack.distributedcomputingca.Client.RunSMPClientGui" target="pattersonjack.distributedcomputingca.Shared.HostData" relationship="CREATE">
+      <point x="122.0" y="-124.0" />
+      <point x="-409.0" y="1152.0" />
+      <point x="-409.0" y="836.0" />
+      <point x="-80.5" y="0.0" />
+    </edge>
+    <edge source="pattersonjack.distributedcomputingca.Shared.Commands.CommandService" target="pattersonjack.distributedcomputingca.Shared.SMPMessage" relationship="CREATE">
+      <point x="-136.0" y="0.0" />
+      <point x="-21.0" y="436.0" />
+      <point x="-21.0" y="680.5" />
+      <point x="-824.0" y="680.5" />
+      <point x="-824.0" y="153.0" />
+      <point x="-630.0" y="153.0" />
+      <point x="0.0" y="71.5" />
+    </edge>
+    <edge source="pattersonjack.distributedcomputingca.Client.SMPClient" target="pattersonjack.distributedcomputingca.Shared.Commands.CommandService" relationship="CREATE">
+      <point x="-15.0" y="-83.0" />
+      <point x="-605.0" y="717.0" />
+      <point x="79.5" y="717.0" />
+      <point x="-50.5" y="60.5" />
+    </edge>
+    <edge source="pattersonjack.distributedcomputingca.Server.SMPServerThread" target="pattersonjack.distributedcomputingca.Shared.SMPMessage" relationship="CREATE">
+      <point x="-187.5" y="0.0" />
+      <point x="-21.0" y="836.0" />
+      <point x="-21.0" y="680.5" />
+      <point x="-824.0" y="680.5" />
+      <point x="-824.0" y="153.0" />
+      <point x="-630.0" y="153.0" />
+      <point x="0.0" y="71.5" />
+    </edge>
+    <edge source="pattersonjack.distributedcomputingca.Client.SMPClient" target="pattersonjack.distributedcomputingca.Shared.SMPSocket" relationship="CREATE">
+      <point x="-15.0" y="83.0" />
+      <point x="-605.0" y="1066.0" />
+      <point x="510.0" y="1066.0" />
+      <point x="510.0" y="347.0" />
+      <point x="-150.0" y="347.0" />
+      <point x="0.0" y="-71.5" />
+    </edge>
+    <edge source="pattersonjack.distributedcomputingca.Server.SMPServer" target="pattersonjack.distributedcomputingca.Server.SMPServerThread" relationship="CREATE">
+      <point x="165.0" y="-116.5" />
+      <point x="555.0" y="836.0" />
+      <point x="187.5" y="0.0" />
+    </edge>
+    <edge source="pattersonjack.distributedcomputingca.Shared.Commands.GetMessageCommand" target="pattersonjack.distributedcomputingca.Shared.SMPMessage" relationship="CREATE">
+      <point x="0.0" y="-38.5" />
+      <point x="0.0" y="71.5" />
+    </edge>
+    <edge source="pattersonjack.distributedcomputingca.Client.RunSMPClientGui" target="pattersonjack.distributedcomputingca.Client.SMPClient" relationship="TO_ONE">
+      <point x="-30.0" y="-138.0" />
+      <point x="-30.0" y="83.0" />
+    </edge>
+    <edge source="pattersonjack.distributedcomputingca.Shared.Commands.LogoutCommand" target="pattersonjack.distributedcomputingca.Shared.SMPMessage" relationship="CREATE">
+      <point x="0.0" y="-38.5" />
+      <point x="-270.0" y="153.0" />
+      <point x="-630.0" y="153.0" />
+      <point x="0.0" y="71.5" />
+    </edge>
+    <edge source="pattersonjack.distributedcomputingca.Shared.Commands.CommandService" target="pattersonjack.distributedcomputingca.Shared.Commands.LogoutCommand" relationship="CREATE">
+      <point x="0.0" y="-60.5" />
+      <point x="130.0" y="292.0" />
+      <point x="-150.0" y="292.0" />
+      <point x="120.0" y="38.5" />
+    </edge>
+    <edge source="pattersonjack.distributedcomputingca.Server.SMPServerThread" target="pattersonjack.distributedcomputingca.Shared.SMPSocket" relationship="TO_ONE">
+      <point x="0.0" y="-204.5" />
+      <point x="290.0" y="570.0" />
+      <point x="-150.0" y="570.0" />
+      <point x="0.0" y="71.5" />
+    </edge>
+    <edge source="pattersonjack.distributedcomputingca.Server.SMPServerThread" target="pattersonjack.distributedcomputingca.Server.SMPServer" relationship="TO_ONE">
+      <point x="187.5" y="15.0" />
+      <point x="540.0" y="851.0" />
+      <point x="150.0" y="-116.5" />
+    </edge>
+    <edge source="pattersonjack.distributedcomputingca.Server.SMPServerThread" target="pattersonjack.distributedcomputingca.Shared.Commands.CommandService" relationship="TO_ONE">
+      <point x="0.0" y="204.5" />
+      <point x="290.0" y="1090.0" />
+      <point x="495.0" y="1090.0" />
+      <point x="495.0" y="436.0" />
+      <point x="136.0" y="0.0" />
+    </edge>
+    <edge source="pattersonjack.distributedcomputingca.Server.SMPServer" target="pattersonjack.distributedcomputingca.Shared.SMPSocket" relationship="CREATE">
+      <point x="120.0" y="-116.5" />
+      <point x="510.0" y="347.0" />
+      <point x="-150.0" y="347.0" />
+      <point x="0.0" y="-71.5" />
+    </edge>
+    <edge source="pattersonjack.distributedcomputingca.Client.RunSMPClientGui" target="pattersonjack.distributedcomputingca.Client.SMPClient" relationship="CREATE">
+      <point x="122.0" y="-83.5" />
+      <point x="-428.0" y="1192.5" />
+      <point x="-428.0" y="836.0" />
+      <point x="124.5" y="0.0" />
+    </edge>
+    <edge source="pattersonjack.distributedcomputingca.Client.SMPClient" target="pattersonjack.distributedcomputingca.Shared.SMPSocket" relationship="TO_ONE">
+      <point x="0.0" y="-83.0" />
+      <point x="-590.0" y="570.0" />
+      <point x="-150.0" y="570.0" />
+      <point x="0.0" y="71.5" />
+    </edge>
+    <edge source="pattersonjack.distributedcomputingca.Client.RunSMPClientCli" target="pattersonjack.distributedcomputingca.Shared.HostData" relationship="CREATE">
+      <point x="-15.0" y="-60.5" />
+      <point x="-325.0" y="1182.0" />
+      <point x="-409.0" y="1182.0" />
+      <point x="-409.0" y="836.0" />
+      <point x="-80.5" y="0.0" />
+    </edge>
+    <edge source="pattersonjack.distributedcomputingca.Server.SMPServer" target="pattersonjack.distributedcomputingca.Shared.Commands.CommandService" relationship="TO_ONE">
+      <point x="0.0" y="-116.5" />
+      <point x="390.0" y="1090.0" />
+      <point x="495.0" y="1090.0" />
+      <point x="495.0" y="436.0" />
+      <point x="136.0" y="0.0" />
+    </edge>
+    <edge source="pattersonjack.distributedcomputingca.Server.RunSMPServer" target="pattersonjack.distributedcomputingca.Server.SMPServer" relationship="CREATE">
+      <point x="76.5" y="0.0" />
+      <point x="390.0" y="1536.0" />
+      <point x="0.0" y="116.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="0.9744668723175967" showDependencies="true" x="-42.899982795698634" y="884.1598107526881" />
+  <SelectedNodes>
+    <node>pattersonjack.distributedcomputingca.Server.RunSMPServer</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

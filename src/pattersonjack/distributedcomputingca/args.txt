@@ -1,4 +1,12 @@
+Run from DistributedComputingCA main directory.
+
 CLIENT
--Djavax.net.ssl.trustStore=ssl/public.jks -Djavax.net.ssl.trustStorePassword=123456789
+IN COMMAND LINE:
+CLI = java -classpath out\production\DistributedComputingCA;Dependency\gson-2.10.1.jar pattersonjack.distributedcomputingca.Client.RunSMPClientCli -Djavax.net.ssl.trustStore=ssl/public.jks -Djavax.net.ssl.trustStorePassword=123456789
+GUI = java -classpath out\production\DistributedComputingCA;Dependency\gson-2.10.1.jar pattersonjack.distributedcomputingca.Client.RunSMPClientGui -Djavax.net.ssl.trustStore=ssl/public.jks -Djavax.net.ssl.trustStorePassword=123456789
+IN INTELLIJ = -Djavax.net.ssl.trustStore=ssl/public.jks -Djavax.net.ssl.trustStorePassword=123456789
+
+
 SERVER
--Djavax.net.ssl.keyStore=ssl/dcca.jks -Djavax.net.ssl.keyStorePassword=123456789ó
+IN COMMAND LINE = java -Djavax.net.ssl.keyStore=ssl/dcca.jks -Djavax.net.ssl.keyStorePassword=123456789 -classpath "out\production\DistributedComputingCA;Dependency\gson-2.10.1.jar" pattersonjack.distributedcomputingca.Server.RunSMPServer
+IN INTELLIJ = -Djavax.net.ssl.keyStore=ssl/dcca.jks -Djavax.net.ssl.keyStorePassword=123456789ó
