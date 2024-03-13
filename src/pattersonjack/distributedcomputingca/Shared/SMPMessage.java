@@ -8,7 +8,7 @@ public record SMPMessage(int statusCode, String command, String message) {
     public static String CommandServerResponse = "server_response";
     public static String CommandServerResponseLogout = "server_logout";
     public static SMPMessage StatusForbiddenMessage = new SMPMessage(SMPMessage.StatusForbidden, SMPMessage.CommandServerResponse,
-            "Error logging you in.");
+            "Error logging you in. Please try again.");
     public static SMPMessage InvalidCommandMessage = new SMPMessage(SMPMessage.StatusBadRequest, SMPMessage.CommandServerResponse,
             "Invalid command. Please try again.");
 

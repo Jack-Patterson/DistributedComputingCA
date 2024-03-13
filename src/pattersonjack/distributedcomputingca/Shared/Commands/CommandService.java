@@ -47,7 +47,7 @@ public class CommandService {
         int argumentsLength = message.message().trim().length() == 0 ? 0 : message.message().trim().split(" ").length;
         if (argumentsLength < usedCommand.getArgumentsCount() && !(usedCommand instanceof GetMessageCommand)) {
             throw new IllegalArgumentException("Command requires " + usedCommand.getArgumentsCount() +
-                    " argument(s) provided. Please provide " + (usedCommand.getArgumentsCount() - argumentsLength) +
+                    " argument(s). Please provide " + (usedCommand.getArgumentsCount() - argumentsLength) +
                     " more argument(s).");
         }
 

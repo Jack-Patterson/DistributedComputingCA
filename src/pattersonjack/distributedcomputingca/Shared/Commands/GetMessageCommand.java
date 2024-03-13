@@ -31,14 +31,14 @@ public class GetMessageCommand extends Command {
                     index = Math.abs(index);
 
                 if (index == 0)
-                    message = "Message at index " + (index + 1) + ": " + thread.getMessages().get(index);
+                    message = "Message at position " + (index + 1) + ": " + thread.getMessages().get(index);
                 else
-                    message = "Message at index " + index + ": " + thread.getMessages().get(index - 1);
+                    message = "Message at position " + index + ": " + thread.getMessages().get(index - 1);
             } catch (NumberFormatException nfe) {
-                return new SMPMessage(SMPMessage.StatusBadRequest, SMPMessage.CommandServerResponse, "Argument was not an integer.");
+                return new SMPMessage(SMPMessage.StatusBadRequest, SMPMessage.CommandServerResponse, "Argument was not an integer. Please try again.");
             } catch (IndexOutOfBoundsException ioobe) {
                 return new SMPMessage(SMPMessage.StatusBadRequest, SMPMessage.CommandServerResponse,
-                        "There are not enough messages for that index. Please input a lower argument.");
+                        "There are not enough messages for that position. There are currently only " + thread.getMessages().size() + " messages.");
             }
         }
 

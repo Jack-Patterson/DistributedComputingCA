@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da1101dd-b20e-44c3-a820-9663183b5911" name="Changes" comment="Generated diagrams">
+    <list default="true" id="da1101dd-b20e-44c3-a820-9663183b5911" name="Changes" comment="Run Commands">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/args.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/args.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/Commands/CommandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/Commands/CommandService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/Commands/GetMessageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/Commands/GetMessageCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/Commands/LogoutCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/Commands/LogoutCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/SMPMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Shared/SMPMessage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,24 +34,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/jackp/Desktop/Development/DistributedComputingCA/src/pattersonjack/distributedcomputingca/Diagrams",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/jackp/Desktop/Development/DistributedComputingCA/src/pattersonjack/distributedcomputingca/Diagrams&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\jackp\Desktop\Development\DistributedComputingCA\src\pattersonjack\distributedcomputingca\Diagrams" />
@@ -135,9 +138,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.RunSMPClientGui" />
-        <item itemvalue="Application.RunSMPServer" />
         <item itemvalue="Application.RunSMPClientCli" />
+        <item itemvalue="Application.RunSMPServer" />
+        <item itemvalue="Application.RunSMPClientGui" />
         <item itemvalue="Application.EchoClient" />
         <item itemvalue="Application.EchoServer" />
       </list>
@@ -165,7 +168,8 @@
       <workItem from="1709120420037" duration="3656000" />
       <workItem from="1709563135420" duration="757000" />
       <workItem from="1709563990540" duration="187000" />
-      <workItem from="1710148015561" duration="3564000" />
+      <workItem from="1710148015561" duration="3840000" />
+      <workItem from="1710322186883" duration="2136000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed code issues">
       <created>1707568571856</created>
@@ -293,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1710150502943</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Run Commands">
+      <created>1710151924026</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1710151924026</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,7 +328,8 @@
     <MESSAGE value="Added appropriate comments and linted all code" />
     <MESSAGE value="Build of code" />
     <MESSAGE value="Generated diagrams" />
-    <option name="LAST_COMMIT_MESSAGE" value="Generated diagrams" />
+    <MESSAGE value="Run Commands" />
+    <option name="LAST_COMMIT_MESSAGE" value="Run Commands" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -331,6 +343,11 @@
           <url>file://$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/PeterExamples/SslReverseEchoer.java</url>
           <line>22</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Server/SMPServerThread.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

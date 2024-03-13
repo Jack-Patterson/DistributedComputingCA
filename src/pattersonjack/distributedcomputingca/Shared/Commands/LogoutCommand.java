@@ -19,6 +19,6 @@ public class LogoutCommand extends Command {
     public SMPMessage execute(SMPMessage sentMessage, SMPServerThread thread) {
         thread.setIsLoggedOff(true);
 
-        return new SMPMessage(SMPMessage.StatusOk, SMPMessage.CommandServerResponseLogout, "Logging off.");
+        return new SMPMessage(SMPMessage.StatusOk, SMPMessage.CommandServerResponseLogout, "Logging you off. Connection is being closed.");
     }
 }
