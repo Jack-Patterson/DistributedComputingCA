@@ -6,6 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="da1101dd-b20e-44c3-a820-9663183b5911" name="Changes" comment="Adjusted diagram to fit better, removed duplicate variables">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Diagrams/diagram-intellij-generated.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Diagrams/diagram-plantuml-generated.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Diagrams/diagram.plantuml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DistributedComputingCA/pattersonjack/distributedcomputingca/Diagrams/diagram.uml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/args.txt" beforeDir="false" afterPath="$PROJECT_DIR$/HOW_TO_RUN.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,11 +55,12 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jackp\Desktop\Development\DistributedComputingCA" />
       <recent name="C:\Users\jackp\Desktop\Development\DistributedComputingCA\src\pattersonjack\distributedcomputingca\Diagrams" />
       <recent name="C:\Users\jackp\Desktop\Development\DistributedComputingCA\src\pattersonjack\distributedcomputingca" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RunSMPServer">
+  <component name="RunManager" selected="Application.RunSMPClientGui">
     <configuration name="EchoClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pattersonjack.distributedcomputingca.SSlTest.EchoClient" />
       <module name="DistributedComputingCA" />
@@ -134,9 +140,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.RunSMPServer" />
-        <item itemvalue="Application.RunSMPClientCli" />
         <item itemvalue="Application.RunSMPClientGui" />
+        <item itemvalue="Application.RunSMPClientCli" />
+        <item itemvalue="Application.RunSMPServer" />
         <item itemvalue="Application.EchoClient" />
         <item itemvalue="Application.EchoServer" />
       </list>
@@ -169,6 +175,7 @@
       <workItem from="1710335940811" duration="2619000" />
       <workItem from="1710850276592" duration="176000" />
       <workItem from="1710850465917" duration="1965000" />
+      <workItem from="1710852673770" duration="1990000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed code issues">
       <created>1707568571856</created>
