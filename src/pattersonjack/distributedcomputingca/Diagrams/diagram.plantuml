@@ -3,6 +3,7 @@
 !theme plain
 top to bottom direction
 skinparam linetype ortho
+skinparam nodesep 50
 
 class Command {
   + Command(String, int): 
