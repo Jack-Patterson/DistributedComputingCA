@@ -10,8 +10,6 @@ class Command {
   - prefix: String
   - argumentsCount: int
   + execute(SMPMessage, SMPServerThread): SMPMessage
-   prefix: String
-   argumentsCount: int
 }
 class CommandService {
   + CommandService(): 
@@ -52,8 +50,6 @@ class RunSMPClientGui {
   - constructParentPanel(): JPanel
   - constructConnectPanel(): JPanel
   - sendMessage(ActionEvent): void
-   messagingInterfaceEnabled: boolean
-   connectionInterfaceEnabled: boolean
 }
 class RunSMPServer {
   + RunSMPServer(): 
@@ -65,7 +61,6 @@ class SMPClient {
   - initializeSSLContext(SSLContext): void
   - getSSLSocket(HostData): SSLSocket
   + sendMessage(String): void
-   SSLContext: SSLContext
 }
 entity SMPMessage << record >> {
   + SMPMessage(int, String, String): 
@@ -81,9 +76,6 @@ class SMPServer {
   - createNewThread(SMPSocket): Thread
   - waitForAndReceiveConnection(SSLServerSocket): SMPSocket
   - initializeSSLContext(SSLContext): void
-   SSLContext: SSLContext
-   serverPort: int
-   SSLServerSocketFactory: SSLServerSocketFactory
 }
 class SMPServerThread {
   + SMPServerThread(SMPServer, SMPSocket, CommandService): 
@@ -96,13 +88,6 @@ class SMPServerThread {
   + setIsLoggedIn(boolean): void
   + run(): void
   - getResponse(Command, SMPMessage): SMPMessage
-   messages: ArrayList<String>
-   server: SMPServer
-   socket: SMPSocket
-   isLoggedIn: boolean
-   isLoggedOff: boolean
-   loggedOff: boolean
-   commandService: CommandService
 }
 class SMPSocket {
   + SMPSocket(SSLSocket): 
