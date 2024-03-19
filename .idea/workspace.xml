@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da1101dd-b20e-44c3-a820-9663183b5911" name="Changes" comment="Adjusted diagram to fit better">
-      <change beforePath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Diagrams/diagram.plantuml" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Diagrams/diagram.plantuml" afterDir="false" />
+    <list default="true" id="da1101dd-b20e-44c3-a820-9663183b5911" name="Changes" comment="Adjusted diagram to fit better, removed duplicate variables">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +168,7 @@
       <workItem from="1710322186883" duration="3996000" />
       <workItem from="1710335940811" duration="2619000" />
       <workItem from="1710850276592" duration="176000" />
-      <workItem from="1710850465917" duration="363000" />
+      <workItem from="1710850465917" duration="1965000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed code issues">
       <created>1707568571856</created>
@@ -317,7 +317,21 @@
       <option name="project" value="LOCAL" />
       <updated>1710850750425</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Adjusted diagram to fit better, removed duplicate variables">
+      <created>1710850859039</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1710850859039</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Adjusted diagram to fit better, removed duplicate variables">
+      <created>1710850890410</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1710850890411</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,7 +358,8 @@
     <MESSAGE value="Run Commands" />
     <MESSAGE value="Adjusted command responses slightly" />
     <MESSAGE value="Adjusted diagram to fit better" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adjusted diagram to fit better" />
+    <MESSAGE value="Adjusted diagram to fit better, removed duplicate variables" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjusted diagram to fit better, removed duplicate variables" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -358,11 +373,6 @@
           <url>file://$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/PeterExamples/SslReverseEchoer.java</url>
           <line>22</line>
           <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/pattersonjack/distributedcomputingca/Server/SMPServerThread.java</url>
-          <line>76</line>
-          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
